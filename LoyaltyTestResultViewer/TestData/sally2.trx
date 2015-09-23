@@ -1,0 +1,1657 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f19ab519-3ea9-44bd-821b-c0b7907a767c" name="x76w@V00971807 2015-08-24 06:00:42" runUser="NORD\x76w" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="eComm_Secure_TEnv_Chrome" id="6716fe22-f05a-4e9f-b0b8-0667a15d0db5">
+    <Deployment userDeploymentRoot="C:\Users\X76W\AppData\Local\VSEQT\QTController\rm\9072" useDefaultDeploymentRoot="false" runDeploymentRoot="x76w_V00971807 2015-08-24 06_00_42" />
+    <Scripts setupScript="\\a0319p871\Builds\SeleniumDrivers\TEnv_Chrome\CopyTestRunConfig.bat" />
+    <RemoteController name="V00971807:6901" />
+    <Execution location="Remote">
+      <TestTypeSpecific />
+      <AgentRule name="Desktop Client">
+        <SelectionCriteria>
+          <AgentProperty name="__Test Environment" value="E-Commerce.0.Srini Local Env" />
+          <AgentProperty name="__Machine Role" value="Desktop Client" />
+        </SelectionCriteria>
+        <DataCollectors>
+          <DataCollector uri="datacollector://microsoft/VideoRecorder/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen and Voice Recorder">
+            <Configuration>
+              <MediaRecorder sendRecordedMediaForPassedTestCase="false" xmlns="" />
+            </Configuration>
+          </DataCollector>
+        </DataCollectors>
+      </AgentRule>
+    </Execution>
+    <Properties />
+  </TestSettings>
+  <Times creation="2015-08-24T06:00:42.8044421-07:00" queuing="2015-08-24T06:00:58.2424421-07:00" start="2015-08-24T06:00:58.4604421-07:00" finish="2015-08-24T06:09:52.5554421-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="5" executed="5" passed="4" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="V00971807" outcome="Warning" timestamp="2015-08-24T06:00:58.0624421-07:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Interop.TDAPIOLELib' directly or indirectly referenced by the test container '\\a0319p871\nordbuild\buildoutput\nordstrom.secureuitest_gated\nordstrom.secureuitest_gated_20150707.4\nordstrom.automation.projects.core.dll' was not found.</Text>
+      </RunInfo>
+    </RunInfos>
+    <DataCollectorMessages>
+      <DataCollectorMessage timestamp="2015-08-24T06:01:02.5534421-07:00" dataCollectorUri="datacollector://microsoft/VideoRecorder/1.0" dataCollectorFriendlyName="Screen and Voice Recorder" agentName="V00971807" level="Warning">
+        <Text>The computer 'V00971807' has more than one display. By default, only the screen from the primary display will be recorded. Run your application in this display. To know the primary display, you can use the Screen Resolution applet in Control Panel.</Text>
+      </DataCollectorMessage>
+      <DataCollectorMessage timestamp="2015-08-24T06:02:21.9644421-07:00" dataCollectorUri="datacollector://microsoft/VideoRecorder/1.0" dataCollectorFriendlyName="Screen and Voice Recorder" agentName="V00971807" level="Warning">
+        <Text>The computer 'V00971807' has more than one display. By default, only the screen from the primary display will be recorded. Run your application in this display. To know the primary display, you can use the Screen Resolution applet in Control Panel.</Text>
+      </DataCollectorMessage>
+      <DataCollectorMessage timestamp="2015-08-24T06:03:30.7704421-07:00" dataCollectorUri="datacollector://microsoft/VideoRecorder/1.0" dataCollectorFriendlyName="Screen and Voice Recorder" agentName="V00971807" level="Warning">
+        <Text>The computer 'V00971807' has more than one display. By default, only the screen from the primary display will be recorded. Run your application in this display. To know the primary display, you can use the Screen Resolution applet in Control Panel.</Text>
+      </DataCollectorMessage>
+      <DataCollectorMessage timestamp="2015-08-24T06:05:30.5054421-07:00" dataCollectorUri="datacollector://microsoft/VideoRecorder/1.0" dataCollectorFriendlyName="Screen and Voice Recorder" agentName="V00971807" level="Warning">
+        <Text>The computer 'V00971807' has more than one display. By default, only the screen from the primary display will be recorded. Run your application in this display. To know the primary display, you can use the Screen Resolution applet in Control Panel.</Text>
+      </DataCollectorMessage>
+      <DataCollectorMessage timestamp="2015-08-24T06:07:27.1144421-07:00" dataCollectorUri="datacollector://microsoft/VideoRecorder/1.0" dataCollectorFriendlyName="Screen and Voice Recorder" agentName="V00971807" level="Warning">
+        <Text>The computer 'V00971807' has more than one display. By default, only the screen from the primary display will be recorded. Run your application in this display. To know the primary display, you can use the Screen Resolution applet in Control Panel.</Text>
+      </DataCollectorMessage>
+    </DataCollectorMessages>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Guest_Regular_Nordstromcard_Checkout" storage="\\a0319p871\nordbuild\buildoutput\nordstrom.secureuitest_gated\nordstrom.secureuitest_gated_20150707.4\nordstrom.automation.projects.core.dll" id="427fc91e-fb1f-6969-39f3-05bc45abd360">
+      <Description>To verify a guest user can successfully checkout a regular item using nordstrom card</Description>
+      <TestCategory>
+        <TestCategoryItem TestCategory="BVT1" />
+        <TestCategoryItem TestCategory="SecureRegWRTO" />
+        <TestCategoryItem TestCategory="BVT_SECURE" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="TestRunConfig" outputDirectory=".\TestRunConfig" />
+        <DeploymentItem filename="TestData" outputDirectory=".\TestData" />
+      </DeploymentItems>
+      <TcmInformation testCaseId="16775" testRunId="9072" testResultId="100000" />
+      <Execution id="802b4f99-97a3-420a-bf95-e95ebc3b0658" />
+      <Properties>
+        <Property>
+          <Key>__Tfs_BuildUri__</Key>
+          <Value>vstfs:///Build/Build/12924</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_IsInLabEnvironment__</Key>
+          <Value>true</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestRunId__</Key>
+          <Value>9072</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestCaseId__</Key>
+          <Value>16775</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TeamProject__</Key>
+          <Value>E-Commerce</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildDirectory__</Key>
+          <Value>\\a0319p871\NordBuild\BuildOutput\Nordstrom.SecureUITest_Gated\Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_LabEnvironment__</Key>
+          <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;LabEnvironment Id="2c8ea7a6-d3f9-4757-931c-4e77145b95f0" Name="Srini Local Env" Uri="vstfs:///LabManagement/LabEnvironment/240"&gt;&lt;LabSystems&gt;&lt;LabSystem Name="V00971807" ComputerName="V00971807" Roles="Desktop Client"&gt;&lt;CustomProperties /&gt;&lt;/LabSystem&gt;&lt;/LabSystems&gt;&lt;/LabEnvironment&gt;</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationId__</Key>
+          <Value>21</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPlanId__</Key>
+          <Value>12381</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationName__</Key>
+          <Value>Windows 8</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPointId__</Key>
+          <Value>27406</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TfsServerCollectionUrl__</Key>
+          <Value>http://ecomtfs:8080/tfs/defaultcollection</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildPlatform__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildNumber__</Key>
+          <Value>Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildFlavor__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildConfigurationId__</Key>
+          <Value>8459</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="file://a0319p871/NordBuild/BuildOutput/Nordstrom.SecureUITest_Gated/Nordstrom.SecureUITest_Gated_20150707.4/Nordstrom.Automation.Projects.Core.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Nordstrom.Automation.Core.Tests.SmokeTests.BuildVerificationTests, Nordstrom.Automation.Projects.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Guest_Regular_Nordstromcard_Checkout" />
+    </UnitTest>
+    <UnitTest name="Guest_CheckOut_WishListItem_Checkout" storage="\\a0319p871\nordbuild\buildoutput\nordstrom.secureuitest_gated\nordstrom.secureuitest_gated_20150707.4\nordstrom.automation.projects.core.dll" id="a414c5b4-a75a-a32b-363f-62df7fd081a9">
+      <Description>Guest user with WishList item on shopping bag does Checkout. </Description>
+      <TestCategory>
+        <TestCategoryItem TestCategory="BVT1" />
+        <TestCategoryItem TestCategory="BVT_SECURE" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="TestRunConfig" outputDirectory=".\TestRunConfig" />
+        <DeploymentItem filename="TestData" outputDirectory=".\TestData" />
+      </DeploymentItems>
+      <TcmInformation testCaseId="17081" testRunId="9072" testResultId="100004" />
+      <Execution id="d8946d82-49ac-4afa-9c4f-9ad5b8e8aea0" />
+      <Properties>
+        <Property>
+          <Key>__Tfs_BuildUri__</Key>
+          <Value>vstfs:///Build/Build/12924</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_IsInLabEnvironment__</Key>
+          <Value>true</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestRunId__</Key>
+          <Value>9072</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestCaseId__</Key>
+          <Value>17081</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TeamProject__</Key>
+          <Value>E-Commerce</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildDirectory__</Key>
+          <Value>\\a0319p871\NordBuild\BuildOutput\Nordstrom.SecureUITest_Gated\Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_LabEnvironment__</Key>
+          <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;LabEnvironment Id="2c8ea7a6-d3f9-4757-931c-4e77145b95f0" Name="Srini Local Env" Uri="vstfs:///LabManagement/LabEnvironment/240"&gt;&lt;LabSystems&gt;&lt;LabSystem Name="V00971807" ComputerName="V00971807" Roles="Desktop Client"&gt;&lt;CustomProperties /&gt;&lt;/LabSystem&gt;&lt;/LabSystems&gt;&lt;/LabEnvironment&gt;</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationId__</Key>
+          <Value>21</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPlanId__</Key>
+          <Value>12381</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationName__</Key>
+          <Value>Windows 8</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPointId__</Key>
+          <Value>27410</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TfsServerCollectionUrl__</Key>
+          <Value>http://ecomtfs:8080/tfs/defaultcollection</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildPlatform__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildNumber__</Key>
+          <Value>Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildFlavor__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildConfigurationId__</Key>
+          <Value>8459</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="file://a0319p871/NordBuild/BuildOutput/Nordstrom.SecureUITest_Gated/Nordstrom.SecureUITest_Gated_20150707.4/Nordstrom.Automation.Projects.Core.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Nordstrom.Automation.Core.Tests.SmokeTests.BuildVerificationTests, Nordstrom.Automation.Projects.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Guest_CheckOut_WishListItem_Checkout" />
+    </UnitTest>
+    <UnitTest name="Web_Checkout_RegisteredUser" storage="\\a0319p871\nordbuild\buildoutput\nordstrom.secureuitest_gated\nordstrom.secureuitest_gated_20150707.4\nordstrom.automation.projects.core.dll" id="b70423c9-1682-dba6-acd9-e25a3cb35aec">
+      <Description>Checkout Item by Registred user</Description>
+      <TestCategory>
+        <TestCategoryItem TestCategory="BVT1" />
+        <TestCategoryItem TestCategory="SecureSmoke" />
+        <TestCategoryItem TestCategory="BVT_SECURE" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="TestRunConfig" outputDirectory=".\TestRunConfig" />
+        <DeploymentItem filename="TestData" outputDirectory=".\TestData" />
+      </DeploymentItems>
+      <TcmInformation testCaseId="16786" testRunId="9072" testResultId="100002" />
+      <Execution id="3a0deb76-17ca-4752-9e9e-dad7387a01c6" />
+      <Properties>
+        <Property>
+          <Key>__Tfs_BuildUri__</Key>
+          <Value>vstfs:///Build/Build/12924</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_IsInLabEnvironment__</Key>
+          <Value>true</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestRunId__</Key>
+          <Value>9072</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestCaseId__</Key>
+          <Value>16786</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TeamProject__</Key>
+          <Value>E-Commerce</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildDirectory__</Key>
+          <Value>\\a0319p871\NordBuild\BuildOutput\Nordstrom.SecureUITest_Gated\Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_LabEnvironment__</Key>
+          <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;LabEnvironment Id="2c8ea7a6-d3f9-4757-931c-4e77145b95f0" Name="Srini Local Env" Uri="vstfs:///LabManagement/LabEnvironment/240"&gt;&lt;LabSystems&gt;&lt;LabSystem Name="V00971807" ComputerName="V00971807" Roles="Desktop Client"&gt;&lt;CustomProperties /&gt;&lt;/LabSystem&gt;&lt;/LabSystems&gt;&lt;/LabEnvironment&gt;</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationId__</Key>
+          <Value>21</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPlanId__</Key>
+          <Value>12381</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationName__</Key>
+          <Value>Windows 8</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPointId__</Key>
+          <Value>27408</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TfsServerCollectionUrl__</Key>
+          <Value>http://ecomtfs:8080/tfs/defaultcollection</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildPlatform__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildNumber__</Key>
+          <Value>Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildFlavor__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildConfigurationId__</Key>
+          <Value>8459</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="file://a0319p871/NordBuild/BuildOutput/Nordstrom.SecureUITest_Gated/Nordstrom.SecureUITest_Gated_20150707.4/Nordstrom.Automation.Projects.Core.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Nordstrom.Automation.Core.Tests.SmokeTests.BuildVerificationTests, Nordstrom.Automation.Projects.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Web_Checkout_RegisteredUser" />
+    </UnitTest>
+    <UnitTest name="Web_Checkout_NewRegisteredUser" storage="\\a0319p871\nordbuild\buildoutput\nordstrom.secureuitest_gated\nordstrom.secureuitest_gated_20150707.4\nordstrom.automation.projects.core.dll" id="47d2260b-8178-ef7d-215c-1ebbfd283523">
+      <Description>Creating a new user, signing in and performing a checkout with it</Description>
+      <TestCategory>
+        <TestCategoryItem TestCategory="BVT1" />
+        <TestCategoryItem TestCategory="SecureSmoke" />
+        <TestCategoryItem TestCategory="BVT_SECURE" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="TestRunConfig" outputDirectory=".\TestRunConfig" />
+        <DeploymentItem filename="TestData" outputDirectory=".\TestData" />
+      </DeploymentItems>
+      <TcmInformation testCaseId="16785" testRunId="9072" testResultId="100001" />
+      <Execution id="bf361355-b548-496e-beeb-5c79e8eb2f5e" />
+      <Properties>
+        <Property>
+          <Key>__Tfs_BuildUri__</Key>
+          <Value>vstfs:///Build/Build/12924</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_IsInLabEnvironment__</Key>
+          <Value>true</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestRunId__</Key>
+          <Value>9072</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestCaseId__</Key>
+          <Value>16785</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TeamProject__</Key>
+          <Value>E-Commerce</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildDirectory__</Key>
+          <Value>\\a0319p871\NordBuild\BuildOutput\Nordstrom.SecureUITest_Gated\Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_LabEnvironment__</Key>
+          <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;LabEnvironment Id="2c8ea7a6-d3f9-4757-931c-4e77145b95f0" Name="Srini Local Env" Uri="vstfs:///LabManagement/LabEnvironment/240"&gt;&lt;LabSystems&gt;&lt;LabSystem Name="V00971807" ComputerName="V00971807" Roles="Desktop Client"&gt;&lt;CustomProperties /&gt;&lt;/LabSystem&gt;&lt;/LabSystems&gt;&lt;/LabEnvironment&gt;</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationId__</Key>
+          <Value>21</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPlanId__</Key>
+          <Value>12381</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationName__</Key>
+          <Value>Windows 8</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPointId__</Key>
+          <Value>27407</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TfsServerCollectionUrl__</Key>
+          <Value>http://ecomtfs:8080/tfs/defaultcollection</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildPlatform__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildNumber__</Key>
+          <Value>Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildFlavor__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildConfigurationId__</Key>
+          <Value>8459</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="file://a0319p871/NordBuild/BuildOutput/Nordstrom.SecureUITest_Gated/Nordstrom.SecureUITest_Gated_20150707.4/Nordstrom.Automation.Projects.Core.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Nordstrom.Automation.Core.Tests.SmokeTests.BuildVerificationTests, Nordstrom.Automation.Projects.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Web_Checkout_NewRegisteredUser" />
+    </UnitTest>
+    <UnitTest name="Guest_CheckOut_Apply_NN_PlaceOrder" storage="\\a0319p871\nordbuild\buildoutput\nordstrom.secureuitest_gated\nordstrom.secureuitest_gated_20150707.4\nordstrom.automation.projects.core.dll" id="183f5ddd-c4f6-a2bc-b482-efdd2a90004e">
+      <Description>Guest user applies NN &amp; GC and place order </Description>
+      <TestCategory>
+        <TestCategoryItem TestCategory="BVT1" />
+        <TestCategoryItem TestCategory="BVT_SECURE" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="TestRunConfig" outputDirectory=".\TestRunConfig" />
+        <DeploymentItem filename="TestData" outputDirectory=".\TestData" />
+      </DeploymentItems>
+      <TcmInformation testCaseId="17073" testRunId="9072" testResultId="100003" />
+      <Execution id="2e025859-57d8-4166-be56-a33cb7eec3e0" />
+      <Properties>
+        <Property>
+          <Key>__Tfs_BuildUri__</Key>
+          <Value>vstfs:///Build/Build/12924</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_IsInLabEnvironment__</Key>
+          <Value>true</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestRunId__</Key>
+          <Value>9072</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestCaseId__</Key>
+          <Value>17073</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TeamProject__</Key>
+          <Value>E-Commerce</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildDirectory__</Key>
+          <Value>\\a0319p871\NordBuild\BuildOutput\Nordstrom.SecureUITest_Gated\Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_LabEnvironment__</Key>
+          <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;LabEnvironment Id="2c8ea7a6-d3f9-4757-931c-4e77145b95f0" Name="Srini Local Env" Uri="vstfs:///LabManagement/LabEnvironment/240"&gt;&lt;LabSystems&gt;&lt;LabSystem Name="V00971807" ComputerName="V00971807" Roles="Desktop Client"&gt;&lt;CustomProperties /&gt;&lt;/LabSystem&gt;&lt;/LabSystems&gt;&lt;/LabEnvironment&gt;</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationId__</Key>
+          <Value>21</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPlanId__</Key>
+          <Value>12381</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationName__</Key>
+          <Value>Windows 8</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPointId__</Key>
+          <Value>27409</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TfsServerCollectionUrl__</Key>
+          <Value>http://ecomtfs:8080/tfs/defaultcollection</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildPlatform__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildNumber__</Key>
+          <Value>Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildFlavor__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildConfigurationId__</Key>
+          <Value>8459</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="file://a0319p871/NordBuild/BuildOutput/Nordstrom.SecureUITest_Gated/Nordstrom.SecureUITest_Gated_20150707.4/Nordstrom.Automation.Projects.Core.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Nordstrom.Automation.Core.Tests.SmokeTests.BuildVerificationTests, Nordstrom.Automation.Projects.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Guest_CheckOut_Apply_NN_PlaceOrder" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="427fc91e-fb1f-6969-39f3-05bc45abd360" executionId="802b4f99-97a3-420a-bf95-e95ebc3b0658" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <TcmInformation testCaseId="16775" testRunId="9072" testResultId="100000" />
+    </TestEntry>
+    <TestEntry testId="47d2260b-8178-ef7d-215c-1ebbfd283523" executionId="bf361355-b548-496e-beeb-5c79e8eb2f5e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <TcmInformation testCaseId="16785" testRunId="9072" testResultId="100001" />
+    </TestEntry>
+    <TestEntry testId="b70423c9-1682-dba6-acd9-e25a3cb35aec" executionId="3a0deb76-17ca-4752-9e9e-dad7387a01c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <TcmInformation testCaseId="16786" testRunId="9072" testResultId="100002" />
+    </TestEntry>
+    <TestEntry testId="183f5ddd-c4f6-a2bc-b482-efdd2a90004e" executionId="2e025859-57d8-4166-be56-a33cb7eec3e0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <TcmInformation testCaseId="17073" testRunId="9072" testResultId="100003" />
+    </TestEntry>
+    <TestEntry testId="a414c5b4-a75a-a32b-363f-62df7fd081a9" executionId="d8946d82-49ac-4afa-9c4f-9ad5b8e8aea0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <TcmInformation testCaseId="17081" testRunId="9072" testResultId="100004" />
+    </TestEntry>
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="802b4f99-97a3-420a-bf95-e95ebc3b0658" testId="427fc91e-fb1f-6969-39f3-05bc45abd360" testName="Guest_Regular_Nordstromcard_Checkout" computerName="V00971807" duration="00:01:18.3264120" startTime="2015-08-24T06:01:02.9014421-07:00" endTime="2015-08-24T06:02:21.9614421-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="802b4f99-97a3-420a-bf95-e95ebc3b0658">
+      <Output>
+        <DebugTrace>Test Started successfully..Please wait..
+Action: Cookie deleted successfully
+Action: Maximizing the window
+Action: Setting the focus on the current window
+Action: Waiting for the URL: http://y0319t481:8080/dataservice/getdata to get the response..
+
+^) Action Name: AtHomePage()
+# Expected Result: Home should be opened Successfully #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - fsr.s #
+Action: Verifying for cookie : fsr.s
+
+      --Deleting existing cookie and creating a new cookie with value - {"i":-1}--
+# Actual Result: Successfully created a cookie #
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - feat #
+Action: Verifying for cookie : feat
+
+      --Creating a new cookie--
+# Actual Result: Successfully created a cookie #
+Action: Home Page Verified successfully
+
+      --Home page loaded succesfully--
+# Actual Result: Home Page Opened Successfully #
+
+^) Action Name: NavigateToProductPage(StyleID,)
+# Expected Result: System should be Navigated to Product Page for SyleID: 2912074 #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/s/2912074
+Action: Waiting for Either one of the Elements Visible:
+Action:  Product Page | 
+Action:  WCM Product Page | 
+Action: WCM Product Page Viewed Successfully
+
+      --Retriving productname from the product Page--
+Action: Value: 'Absolue' Premium ßx Absolute Replenishing Lotion SPF 15 retrieved successfully from WCM Product Page Header Product Name Area
+
+      --ProductName: 'Absolue' Premium ßx Absolute Replenishing Lotion SPF 15 Retrieved successfully--
+# Actual Result: Navigated to Product Page with SyleID 2912074 Successfully #
+
+^) Action Name: ClearMiniBag()
+# Expected Result: Mini Bag should be cleared #
+# Actual Result: Minibag Cleared successfully #
+
+^) Action Name: SelectProductProperties(PriceFilter,Size,Color,Width,)
+# Expected Result: Select Product Properties as in TDM #
+
+      --Select the Product Size :One Size--
+
+      --Selecting the Product Width :One Size--
+# Actual Result: Selected the product properties successfully #
+
+^) Action Name: AddItemToShoppingBag(NumberOfItems,)
+# Expected Result: 1 Items should be to the Shopping bag #
+Action: Value: Shopping Bag [0] retrieved successfully from Minibag Shoppingbag Link
+Action: Clicking on the Element: WCM Product Page &gt;add to shopping bag button
+Action: Waiting for Either one of the Elements Visible:
+Action:  ProductPage&gt;Insured product&gt;Confirmation &gt; OK button | 
+Action:  WCM Product Page &gt; mini bag | 
+Action: WCM Product Page &gt; mini bag Viewed Successfully
+# Actual Result: 1 Added successfully to the Minibag #
+
+^) Action Name: NavigateToShoppingBag()
+# Expected Result: Navigating to Product Shopping Bag Page #
+Action: Clicking on the Element: Header Shoppingbag Link
+Action: Waiting for Either one of the Elements Visible:
+Action:  Shopping Bag Page | 
+Action:  FLS page &gt; Go to checkout | 
+Action: Shopping Bag Page Viewed Successfully
+# Actual Result: Navigated to Shopping bag successfully #
+Action: Shopping Bag Page Verified successfully
+
+      --Shopping Bag Page page loaded succesfully--
+
+^) Action Name: ProceedToCheckout(user,)
+# Expected Result: User should be able to Click on Checkout Button From Shopping Bag Page #
+Action: Waiting for Element: Shoppingbag Page proceedtocheckout button Visible
+Action: Shoppingbag Page proceedtocheckout button visible in the page Verified successfully
+Action: Clicking on the Element: Shoppingbag Page proceedtocheckout button
+Action: Waiting for Either one of the Elements Visible:
+Action:  Shopping Bag page&gt;No Beauty Modal | 
+Action:  Samples Page | 
+Action:  Address Setup Page | 
+Action:  Order Review Page | 
+Action:  Signin PopUp Modal from Shopping Bag Page | 
+Action:  Order Submit Page | 
+Action: Order Submit Page Viewed Successfully
+# Actual Result: Clicked on Proceed to Checkout button successfully #
+Action: Order Submit Page Verified successfully
+
+      --Order Submit Page page loaded succesfully--
+
+^) Action Name: ContinueAsGuest()
+# Expected Result: To click 'Continue as guest' button and verify that Login component becomes in informational state #
+Action: Order Submit Page&gt; Continue As Guest Button Verified successfully
+Action: Waiting for Element: Order Submit page &gt; Enter a Promotion Code link Not Visible
+Action: Order Submit page &gt; Enter a Promotion Code link is not visible is the page Verified successfully
+Action: Clicking on the Element: Order Submit Page&gt; Continue As Guest Button
+Action: Order Submit Page &gt; Login Component Verified successfully
+# Actual Result: Continue as guest clicked and login component turned to informational state Successfully #
+
+^) Action Name: EnterShippingAddress(FirstName,Middlename,Lastname,Address1,Address2,City,State,ZipCode,Phone,StateKeyStroke,)
+# Expected Result: User should be able to Enter Shipping address fields #
+Action: Waiting for Element: Order Submit Page &gt; First Name Textbox Visible
+Action: Order Submit Page &gt; First Name Textbox visible in the page Verified successfully
+Action: Entering Value : 'Anand' in the field: Order Submit Page &gt; First Name Textbox
+Action: Entering Value : '' in the field: Order Submit Page &gt; Middle Name Textbox
+Action: Entering Value : 'Mohan' in the field: Order Submit Page &gt; Last Name Textbox
+Action: Entering Value : '401 NE Northgate Way' in the field: Order Submit Page &gt; Address Textbox
+Action: Entering Value : '' in the field: Order Submit Page &gt; Address2 Textbox
+Action: Entering Value : 'Seattle' in the field: Order Submit Page &gt; City Textbox
+Action: Selecting the label text: 'Washington' from the Locator: Order Submit Page &gt; State Dropdown
+Action: Entering Value : '98125' in the field: Order Submit Page&gt; ZipCode Textbox
+Action: Entering Value : '9895320127' in the field: Order Submit Page&gt; Phone Number Textbox
+# Actual Result: Entered Shipping address successfully #
+
+^) Action Name: ContinueShippingAddress()
+# Expected Result: User should be able to click continue button in Shipping method component #
+Action: Clicking on the Element: Order Submit Page&gt; Continue Shipping address
+# Actual Result: Continue button clicked successfully in Shipping Address component #
+
+^) Action Name: ContinueShippingMethod()
+# Expected Result: User should be able to click continue button in Shipping method component #
+Action: Waiting for Element: Order Submit Page&gt; Continue Shipping Method Visible
+Action: Order Submit Page&gt; Continue Shipping Method visible in the page Verified successfully
+Action: Clicking on the Element: Order Submit Page&gt; Continue Shipping Method
+# Actual Result: Continue button clicked successfully in Shipping method component #
+
+^) Action Name: EnterCardNumber(strCardNumber,blnSaveCreditCard,)
+# Expected Result: Entering Card Details in Payment Component #
+Action: Order Submit Page &gt; Payment Component &gt; Credit card Textbox Verified successfully
+Action: Entering Value : '106000284' in the field: Order Submit Page &gt; Payment Component &gt; Credit card Textbox
+Action: Pressing the tab key for Order Submit Page &gt; Payment Component &gt; Credit card Textbox
+
+^) Action Name: EnterContactDetailsInPayment(strEmailID,strPhoneNo,)
+# Expected Result: Verifying is user can enter contact details #
+Action: Entering Value : 'jerine3@test.com' in the field: Order submit page&gt;Contact details&gt;Enter email id
+Action: Entering Value : '9895320127' in the field: Order submit page&gt;Contact details&gt;Enter Phone number
+# Actual Result: User entered contact details #
+
+^) Action Name: ContinuePayment()
+# Expected Result: Proceeding from Payment Component #
+Action: Order Submit Page&gt; Payment Component&gt; Continue Button Verified successfully
+Action: You can review this order before it's final. verified successfully in the page
+Action: Clicking on the Element: Order Submit Page&gt; Payment Component&gt; Continue Button
+Action: Order Submit Page&gt; Payment Component&gt; Edit Button Verified successfully
+
+^) Action Name: SaveYourInfoSkip(blnSaveCreditCard,)
+# Expected Result: Skipping Save Your Info Functionality #
+Action: Clicking on the Element: Order Submit Page&gt; Save Your Info&gt; Skip Button
+Action: You have chosen not to create a Nordstrom.com account. verified successfully in the locator Order Submit Page&gt; Save Your Info section informational state label(create/skip account)
+Action: Waiting for Element: Order Submit Page&gt; Review Your Order&gt; Place Order Button Visible
+Action: Order Submit Page&gt; Review Your Order&gt; Place Order Button visible in the page Verified successfully
+# Actual Result: Save Your Info Skipped #
+
+^) Action Name: ClickOnPlaceOrderButton(bolOrderSubmission,)
+# Expected Result: Verify User is able to place an order #
+Action: Waiting for Element: Order Submit Page&gt; Review Your Order&gt; Place Order Button Visible
+Action: Order Submit Page&gt; Review Your Order&gt; Place Order Button visible in the page Verified successfully
+
+      --Clicking on the 'Place Order' button--
+Action: Clicking on the Element: Order Submit Page&gt; Review Your Order&gt; Place Order Button
+Action: Waiting for Element: Order Confirmation Page Visible
+Action: Order Confirmation Page visible in the page Verified successfully
+# Actual Result: Place order button functionality verified successfully #
+Action: Order Confirmation Page Verified successfully
+
+      --Order confirmation page page loaded succesfully--
+
+^) Action Name: VerifyPrintReceiptButton()
+# Expected Result: To verify whether 'Print Receipt' Button is working as expected #
+Action: Orderconfirmation page &gt; Print Itemized Receipt Button Verified successfully
+# Actual Result: Verified Print Receipt button successfully #
+
+--------------------------------------------------------------------------
+Guest_Regular_Nordstromcard_Checkout   -   Passed
+--------------------------------------------------------------------------
+Action: Stopping Test..
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bf361355-b548-496e-beeb-5c79e8eb2f5e" testId="47d2260b-8178-ef7d-215c-1ebbfd283523" testName="Web_Checkout_NewRegisteredUser" computerName="V00971807" duration="00:01:07.9995785" startTime="2015-08-24T06:02:22.3064421-07:00" endTime="2015-08-24T06:03:30.7684421-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf361355-b548-496e-beeb-5c79e8eb2f5e">
+      <Output>
+        <DebugTrace>Test Started successfully..Please wait..
+Action: Cookie deleted successfully
+Action: Maximizing the window
+Action: Setting the focus on the current window
+Action: Waiting for the URL: http://y0319t481:8080/dataservice/getdata to get the response..
+
+^) Action Name: AtHomePage()
+# Expected Result: Home should be opened Successfully #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - fsr.s #
+Action: Verifying for cookie : fsr.s
+
+      --Deleting existing cookie and creating a new cookie with value - {"i":-1}--
+# Actual Result: Successfully created a cookie #
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - feat #
+Action: Verifying for cookie : feat
+
+      --Creating a new cookie--
+# Actual Result: Successfully created a cookie #
+Action: Home Page Verified successfully
+
+      --Home page loaded succesfully--
+# Actual Result: Home Page Opened Successfully #
+
+^) Action Name: NavigateSignInPage()
+# Expected Result: User should be able to Navigate to Sign In Page #
+Action: Clicking on the Element: Homepage Global Signin Link
+Action: Signin Page Verified successfully
+
+      --Sign In page loaded succesfully--
+# Actual Result: User Navigated to SignIn Page Successfully #
+
+^) Action Name: CreateAccount(strFirstName,strEmail,strPassword,strZipCode,strGender,)
+# Expected Result: User should be able to Create an Account #
+Action: Entering Value : 'DynamicUser' in the field: Sign In Page, New Customer&gt; First Name Text box
+Action: Entering Value : '201508240225jerine3@test.com' in the field: Sign In Page, New Customer&gt; Email Text box
+Action: Entering Value : '201508240225jerine3@test.com' in the field: Sign In Page, New Customer&gt; Email Confirm Text box
+Action: Entering Value : 'Password1' in the field: Sign In Page, New Customer&gt; Password Text box
+Action: Entering Value : 'Password1' in the field: Sign In Page, New Customer&gt; Password Confirm Text box
+Action: Entering Value : '98125' in the field: Sign In Page, New Customer&gt; Zip Code Text box
+Action: Selecting the label text: 'Male' from the Locator: Sign In Page, New Customer&gt; Gender Drop Down List
+Action: Clicking on the Element: Sign In Page, New Customer&gt; Create Account Button
+Action: Header Signout button &gt; Sign Out Verified successfully
+# Actual Result: Created an Account Successfully #
+
+^) Action Name: NavigateToHomePage()
+# Expected Result: Navigating to Home Page #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/
+Action: Home Page Verified successfully
+
+      --Home Page page loaded succesfully--
+
+^) Action Name: NavigateToProductPage(StyleID,)
+# Expected Result: System should be Navigated to Product Page for SyleID: 3036023 #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/s/3036023
+Action: Waiting for Either one of the Elements Visible:
+Action:  Product Page | 
+Action:  WCM Product Page | 
+Action: WCM Product Page Viewed Successfully
+
+      --Retriving productname from the product Page--
+Action: Value: Donna Karan 'Ultra Sheer' Control Top Hosiery retrieved successfully from WCM Product Page Header Product Name Area
+
+      --ProductName: Donna Karan 'Ultra Sheer' Control Top Hosiery Retrieved successfully--
+# Actual Result: Navigated to Product Page with SyleID 3036023 Successfully #
+
+^) Action Name: SelectProductProperties(PriceFilter,Size,Color,Width,)
+# Expected Result: Select Product Properties as in TDM #
+
+      --Select the Product Size :Medium--
+Action: Clicking on the Element: Medium Size button
+
+      --Selecting the Product Width :Medium--
+
+      --Selecting the Product Color :Off Black--
+Action: Selecting the label text: 'Off Black' from the Locator: WCM Productpage SKU Color Drop Down List
+# Actual Result: Selected the product properties successfully #
+
+^) Action Name: AddItemToShoppingBag(NumberOfItems,)
+# Expected Result: 1 Items should be to the Shopping bag #
+Action: Value: Shopping Bag [0] retrieved successfully from Minibag Shoppingbag Link
+Action: Clicking on the Element: WCM Product Page &gt;add to shopping bag button
+Action: Waiting for Either one of the Elements Visible:
+Action:  ProductPage&gt;Insured product&gt;Confirmation &gt; OK button | 
+Action:  WCM Product Page &gt; mini bag | 
+Action: WCM Product Page &gt; mini bag Viewed Successfully
+# Actual Result: 1 Added successfully to the Minibag #
+
+^) Action Name: NavigateToShoppingBag()
+# Expected Result: Navigating to Product Shopping Bag Page #
+Action: Clicking on the Element: Header Shoppingbag Link
+Action: Waiting for Either one of the Elements Visible:
+Action:  Shopping Bag Page | 
+Action:  FLS page &gt; Go to checkout | 
+Action: Shopping Bag Page Viewed Successfully
+# Actual Result: Navigated to Shopping bag successfully #
+Action: Shopping Bag Page Verified successfully
+
+      --Shopping Bag Page page loaded succesfully--
+
+^) Action Name: ProceedToCheckout(user,)
+# Expected Result: User should be able to Click on Checkout Button From Shopping Bag Page #
+Action: Waiting for Element: Shoppingbag Page proceedtocheckout button Visible
+Action: Shoppingbag Page proceedtocheckout button visible in the page Verified successfully
+Action: Clicking on the Element: Shoppingbag Page proceedtocheckout button
+Action: Waiting for Either one of the Elements Visible:
+Action:  Shopping Bag page&gt;No Beauty Modal | 
+Action:  Samples Page | 
+Action:  Address Setup Page | 
+Action:  Order Review Page | 
+Action:  Signin PopUp Modal from Shopping Bag Page | 
+Action:  Order Submit Page | 
+Action: Order Submit Page Viewed Successfully
+# Actual Result: Clicked on Proceed to Checkout button successfully #
+Action: Order Submit Page Verified successfully
+
+      --Order Submit Page page loaded succesfully--
+
+^) Action Name: EnterShippingAddress(FirstName,Middlename,Lastname,Address1,Address2,City,State,ZipCode,Phone,StateKeyStroke,)
+# Expected Result: User should be able to Enter Shipping address fields #
+Action: Waiting for Element: Order Submit Page &gt; First Name Textbox Visible
+Action: Order Submit Page &gt; First Name Textbox visible in the page Verified successfully
+Action: Entering Value : 'Anand' in the field: Order Submit Page &gt; First Name Textbox
+Action: Entering Value : '' in the field: Order Submit Page &gt; Middle Name Textbox
+Action: Entering Value : 'Mohan' in the field: Order Submit Page &gt; Last Name Textbox
+Action: Entering Value : '401 NE Northgate Way' in the field: Order Submit Page &gt; Address Textbox
+Action: Entering Value : '' in the field: Order Submit Page &gt; Address2 Textbox
+Action: Entering Value : 'Seattle' in the field: Order Submit Page &gt; City Textbox
+Action: Selecting the label text: 'Washington' from the Locator: Order Submit Page &gt; State Dropdown
+Action: Entering Value : '98125' in the field: Order Submit Page&gt; ZipCode Textbox
+Action: Entering Value : '9895320127' in the field: Order Submit Page&gt; Phone Number Textbox
+# Actual Result: Entered Shipping address successfully #
+
+^) Action Name: ContinueShippingAddress()
+# Expected Result: User should be able to click continue button in Shipping method component #
+Action: Clicking on the Element: Order Submit Page&gt; Continue Shipping address
+# Actual Result: Continue button clicked successfully in Shipping Address component #
+
+^) Action Name: ContinueShippingMethod()
+# Expected Result: User should be able to click continue button in Shipping method component #
+Action: Waiting for Element: Order Submit Page&gt; Continue Shipping Method Visible
+Action: Order Submit Page&gt; Continue Shipping Method visible in the page Verified successfully
+Action: Clicking on the Element: Order Submit Page&gt; Continue Shipping Method
+# Actual Result: Continue button clicked successfully in Shipping method component #
+
+^) Action Name: EnterCardNumber(strCardNumber,blnSaveCreditCard,)
+# Expected Result: Entering Card Details in Payment Component #
+Action: Order Submit Page &gt; Payment Component &gt; Credit card Textbox Verified successfully
+Action: Entering Value : '750081619' in the field: Order Submit Page &gt; Payment Component &gt; Credit card Textbox
+Action: Pressing the tab key for Order Submit Page &gt; Payment Component &gt; Credit card Textbox
+
+^) Action Name: ClickOnContinueButtonInPaymentComponent(blnInformationalStateValidate,blnVerifyEmailAddress,)
+# Expected Result: Verify User can click on continue button in payment component #
+Action: Waiting for Element: Order Submit Page&gt; Payment Component&gt; Continue Button Visible
+Action: Order Submit Page&gt; Payment Component&gt; Continue Button visible in the page Verified successfully
+Action: Clicking on the Element: Order Submit Page&gt; Payment Component&gt; Continue Button
+# Actual Result: Successfully clicked on continue button in payment component #
+
+^) Action Name: ClickOnPlaceOrderButton(bolOrderSubmission,)
+# Expected Result: Verify User is able to place an order #
+Action: Waiting for Element: Order Submit Page&gt; Review Your Order&gt; Place Order Button Visible
+Action: Order Submit Page&gt; Review Your Order&gt; Place Order Button visible in the page Verified successfully
+
+      --Clicking on the 'Place Order' button--
+Action: Clicking on the Element: Order Submit Page&gt; Review Your Order&gt; Place Order Button
+Action: Waiting for Element: Order Confirmation Page Visible
+Action: Order Confirmation Page visible in the page Verified successfully
+# Actual Result: Place order button functionality verified successfully #
+Action: Order Confirmation Page Verified successfully
+
+      --Order confirmation page page loaded succesfully--
+
+^) Action Name: VerifyOrderConfirmationPage(user,)
+# Expected Result: To verify Order Confirmation Page #
+Action: Orderconfirmation page &gt; Print Itemized Receipt Button Verified successfully
+Action: Thanks for your order, number verified successfully in the page
+Action: Value: Thanks for your order, number 758882230, placed on 08/24/2015. retrieved successfully from Orderconfirmation page &gt; Order Confirmation Message
+
+      --The Created order number is758882230--
+Action: A confirmation email will be sent to verified successfully in the page
+# Actual Result: Verified Order Confirmation Page successfully #
+
+--------------------------------------------------------------------------
+Web_Checkout_NewRegisteredUser   -   Passed
+--------------------------------------------------------------------------
+Action: Stopping Test..
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3a0deb76-17ca-4752-9e9e-dad7387a01c6" testId="b70423c9-1682-dba6-acd9-e25a3cb35aec" testName="Web_Checkout_RegisteredUser" computerName="V00971807" duration="00:01:58.8937392" startTime="2015-08-24T06:03:31.1064421-07:00" endTime="2015-08-24T06:05:30.5044421-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3a0deb76-17ca-4752-9e9e-dad7387a01c6">
+      <Output>
+        <DebugTrace>Test Started successfully..Please wait..
+Action: Cookie deleted successfully
+Action: Maximizing the window
+Action: Setting the focus on the current window
+Action: Waiting for the URL: http://y0319t481:8080/dataservice/getdata to get the response..
+
+^) Action Name: AtHomePage()
+# Expected Result: Home should be opened Successfully #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - fsr.s #
+Action: Verifying for cookie : fsr.s
+
+      --Deleting existing cookie and creating a new cookie with value - {"i":-1}--
+# Actual Result: Successfully created a cookie #
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - feat #
+Action: Verifying for cookie : feat
+
+      --Creating a new cookie--
+# Actual Result: Successfully created a cookie #
+Action: Home Page Verified successfully
+
+      --Home page loaded succesfully--
+# Actual Result: Home Page Opened Successfully #
+
+^) Action Name: NavigateSignInPage()
+# Expected Result: User should be able to Navigate to Sign In Page #
+Action: Clicking on the Element: Homepage Global Signin Link
+Action: Signin Page Verified successfully
+
+      --Sign In page loaded succesfully--
+# Actual Result: User Navigated to SignIn Page Successfully #
+
+^) Action Name: CreateAccount(strFirstName,strEmail,strPassword,strZipCode,strGender,)
+# Expected Result: User should be able to Create an Account #
+Action: Entering Value : 'Anand' in the field: Sign In Page, New Customer&gt; First Name Text box
+Action: Entering Value : '201508240334jerine3@test.com' in the field: Sign In Page, New Customer&gt; Email Text box
+Action: Entering Value : '201508240334jerine3@test.com' in the field: Sign In Page, New Customer&gt; Email Confirm Text box
+Action: Entering Value : 'Password1' in the field: Sign In Page, New Customer&gt; Password Text box
+Action: Entering Value : 'Password1' in the field: Sign In Page, New Customer&gt; Password Confirm Text box
+Action: Entering Value : '98125' in the field: Sign In Page, New Customer&gt; Zip Code Text box
+Action: Selecting the label text: 'Male' from the Locator: Sign In Page, New Customer&gt; Gender Drop Down List
+Action: Clicking on the Element: Sign In Page, New Customer&gt; Create Account Button
+Action: Header Signout button &gt; Sign Out Verified successfully
+# Actual Result: Created an Account Successfully #
+
+^) Action Name: AddNewAddress(strFirstName,strLastName,strAddress1,strAddress2,strCity,strState,strZipCode,strCountry,strPhoneNumber,strpassword,)
+# Expected Result: User should be able to Add a new address #
+Action: Waiting for Element: Link To List of Address and phone Numbers Available Visible
+Action: Link To List of Address and phone Numbers Available visible in the page Verified successfully
+Action: Clicking on the Element: Link To List of Address and phone Numbers Available
+Action: Waiting for Element: Link to Add New Address Visible
+Action: Link to Add New Address visible in the page Verified successfully
+Action: Clicking on the Element: Link to Add New Address
+Action: Waiting for Either one of the Elements Visible:
+Action:  Link to Add New Address | 
+Action:  Account Summary Page&gt;Address Modal&gt;Address Firstname Textbox | 
+Action: Account Summary Page&gt;Address Modal&gt;Address Firstname Textbox Viewed Successfully
+Action: Entering Value : 'Anand' in the field: Account Summary Page&gt;Address Modal&gt;Address Firstname Textbox
+Action: Entering Value : 'Mohan' in the field: Account Summary Page&gt;Address Modal&gt; Lastname Textbox
+Action: Entering Value : '401 NE Northgate Way' in the field: Account Summary Page&gt;Address Modal&gt; Address Line1 Textbox
+Action: Entering Value : '' in the field: Account Summary Page&gt;Address Modal&gt;Address Line2 Textbox
+Action: Entering Value : 'Seattle' in the field: Account Summary Page&gt;Address Modal&gt; City Textbox
+Action: Selecting the label text: 'Washington' from the Locator: Account Summary Page&gt;Address Modal&gt; State Dropdownlist
+Action: Entering Value : '98125' in the field: Account Summary Page&gt;Address Modal&gt; Zipcode Textbox
+Action: Selecting the label text: 'United States' from the Locator: Account Summary Page&gt;Address Modal&gt; Country Dropdownlist
+Action: Entering Value : '9895320127' in the field: Account Summary Page&gt;Address Modal&gt; PhoneNumber Textbox
+
+      --Waiting For One Moment Image to Disappear--
+Action: Waiting for Element: One Moment Image Showing while doing a transaction Not Visible
+Action: One Moment Image Showing while doing a transaction is not visible is the page Verified successfully
+Action: Waiting for Either one of the Elements Visible:
+Action:  AccountInfo Page&gt; Address Suggestion Popup &gt; use button | 
+Action:  Account Summary Page&gt;Remove Link | 
+Action: Account Summary Page&gt;Remove Link Viewed Successfully
+# Actual Result: New adddress added successfully #
+
+^) Action Name: NavigateToPaymentMethodsPage()
+# Expected Result: User should be able to Navigate to Payment Methods Area #
+Action: Waiting for Element: Payment Methods link displayed in the left menu of Account Summary page Visible
+Action: Payment Methods link displayed in the left menu of Account Summary page visible in the page Verified successfully
+Action: Clicking on the Element: Payment Methods link displayed in the left menu of Account Summary page
+Action: Add one or more cards to Payment Methods for easy selection during Checkout. verified successfully in the page
+# Actual Result: Navigated to Payment methods page successfully #
+
+^) Action Name: AddNewPaymentMethod(strFirstName,strLastName,strAddress1,strAddress2,strCity,strState,strZipCode,strCountry,strPhone,strCreditCardType,strCreditCardNumber,strExpiryMonth,strExpiryYear,)
+# Expected Result: User should be able to add a New Payment Method #
+Action: Clicking on the Element: Account Summary Page&gt;Payment Mathods&gt;Add new payment method Link
+Action: Waiting for Element: Add new payment method Popup Modal Visible
+Action: Add new payment method Popup Modal visible in the page Verified successfully
+
+      --Filling Complete Billing Address Information--
+Action: Entering Value : 'Anand' in the field: Add New Payment Billingaddressform Firstname Textbox
+Action: Entering Value : 'Mohan' in the field: Add New Payment BillingAddressform Lastname Textbox
+Action: Entering Value : '401 NE Northgate Way' in the field: Add New Payment BillingAddressform Address Line1 Textbox
+Action: Entering Value : '' in the field: Add New Payment BillingAddressform Address Line2 Textbox
+Action: Entering Value : 'Seattle' in the field: Add New Payment BillingAddressform City Textbox
+Action: Selecting the label text: 'Washington' from the Locator: Add New Payment BillingAddressform State Dropdownlist
+Action: Entering Value : '98125' in the field: Add New Payment BillingAddressform Zipcode Textbox
+Action: Selecting the label text: 'United States' from the Locator: Add New Payment BillingAddressform Country Dropdownlist
+Action: Entering Value : '9895320127' in the field: Add New Payment BillingAddressform Phone number Textbox
+
+      --Filling Credit Card Information--
+Action: Selecting the label text: 'Discover' from the Locator: Add New Payment BillingAddressform Credit card Type Dropdownlist
+Action: Entering Value : '6011002977662238' in the field: Add New Payment Modal&gt;Other Cards
+Action: Selecting the label text: '5' from the Locator: AccountInfo Page&gt; Add New Payment &gt; Expiration month 
+Action: Selecting the label text: '2020' from the Locator: AccountInfo Page&gt; Add New Payment &gt; Expiration year
+Action: Clicking on the Element: Add New Payment BillingAddressform Save button
+
+      --Waiting For One Moment Image to Disappear--
+Action: Waiting for Element: One Moment Image Showing while doing a transaction Not Visible
+Action: One Moment Image Showing while doing a transaction is not visible is the page Verified successfully
+Action: Waiting for Element: Remove Card Link in the Disaply List Area of Account Summary page Visible
+Action: Remove Card Link in the Disaply List Area of Account Summary page visible in the page Verified successfully
+
+^) Action Name: SignOut()
+# Expected Result: Signing out from the Application #
+Action: Waiting for Either one of the Elements Visible:
+Action:  Header Signout button &gt; Sign Out | 
+Action:  Header Signout button &gt; Not You | 
+Action: Header Signout button &gt; Sign Out Viewed Successfully
+
+      --Clicking on 'Sign out'--
+Action: Clicking on the Element: Header Signout button &gt; Sign Out
+Action: Waiting for Element: Home Page Visible
+Action: Home Page visible in the page Verified successfully
+# Actual Result: Successfully signed out from the application #
+
+^) Action Name: NavigateSignInPage()
+# Expected Result: User should be able to Navigate to Sign In Page #
+Action: Clicking on the Element: Homepage Global Signin Link
+Action: Signin Page Verified successfully
+
+      --Sign In page loaded succesfully--
+# Actual Result: User Navigated to SignIn Page Successfully #
+
+^) Action Name: UserLogin(strEmail,strPassword,)
+# Expected Result: Logging into the application using Email as 201508240334jerine3@test.com Password as Password1 #
+Action: Highlighting the element
+Action: Entering Value : '201508240334jerine3@test.com' in the field: Email Textbox
+Action: Highlighting the element
+Action: Entering Value : 'Password1' in the field: Password Textbox
+Action: Highlighting the element
+Action: Clicking on the Element: Signin Button
+Action: Header Signout button &gt; Sign Out Verified successfully
+
+      --Login Page page loaded succesfully--
+# Actual Result: User logged in Successfully #
+
+^) Action Name: NavigateToYourAccount()
+# Expected Result: Navigating to Your Account Page #
+Action: Waiting for Element: Your Account in top navigation Visible
+Action: Your Account in top navigation visible in the page Verified successfully
+Action: Clicking on the Element: Your Account in top navigation
+# Actual Result: Your Account Page loaded successfully #
+
+^) Action Name: NavigateToPaymentMethodsPage()
+# Expected Result: User should be able to Navigate to Payment Methods Area #
+Action: Waiting for Element: Payment Methods link displayed in the left menu of Account Summary page Visible
+Action: Payment Methods link displayed in the left menu of Account Summary page visible in the page Verified successfully
+Action: Clicking on the Element: Payment Methods link displayed in the left menu of Account Summary page
+Action: Add one or more cards to Payment Methods for easy selection during Checkout. verified successfully in the page
+# Actual Result: Navigated to Payment methods page successfully #
+
+^) Action Name: ClearCreditCardDisplayList()
+# Expected Result: To clear all the Credit Card Details #
+Action: Value: Default Card
+Discover
+*****2238
+Edit
+Remove Card
+
+  Anand Mohan
+401 NE Northgate Way
+Seattle, WA 98125
+United States
+(989) 532-0127 retrieved successfully from Add new payment methods Disaply List Area, Default Card Name
+Action: Clicking on the Element: Remove Card Link in the Disaply List Area of Account Summary page
+Action: Waiting for Element: OK Button when Clicked on Remove Card Link in the Disaply List Area of Account Summary page Visible
+Action: OK Button when Clicked on Remove Card Link in the Disaply List Area of Account Summary page visible in the page Verified successfully
+Action: Clicking on the Element: OK Button when Clicked on Remove Card Link in the Disaply List Area of Account Summary page
+
+      --Waiting For One Moment Image to Disappear--
+Action: Waiting for Element: One Moment Image Showing while doing a transaction Not Visible
+Action: One Moment Image Showing while doing a transaction is not visible is the page Verified successfully
+
+      --Removing 1 Existing Payment method From the Display List successfully--
+
+      --Removed all Existing Payment Methods from the Display List--
+# Actual Result: Removed all the credit card details successfully #
+
+^) Action Name: NavigateToProductPage(StyleID,)
+# Expected Result: System should be Navigated to Product Page for SyleID: 2786802 #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/s/2786802
+Action: Waiting for Either one of the Elements Visible:
+Action:  Product Page | 
+Action:  WCM Product Page | 
+Action: WCM Product Page Viewed Successfully
+
+      --Retriving productname from the product Page--
+Action: Value: 'Rénergie' Anti-Wrinkle &amp; Firming Cream retrieved successfully from WCM Product Page Header Product Name Area
+
+      --ProductName: 'Rénergie' Anti-Wrinkle &amp; Firming Cream Retrieved successfully--
+# Actual Result: Navigated to Product Page with SyleID 2786802 Successfully #
+
+^) Action Name: ClearMiniBag()
+# Expected Result: Mini Bag should be cleared #
+# Actual Result: Minibag Cleared successfully #
+
+^) Action Name: SelectProductProperties(PriceFilter,Size,Color,Width,)
+# Expected Result: Select Product Properties as in TDM #
+
+      --Select the Product Size :2.5 Oz--
+Action: Clicking on the Element: 2.5 oz Size button
+
+      --Selecting the Product Width :2.5 oz--
+# Actual Result: Selected the product properties successfully #
+
+^) Action Name: AddItemToShoppingBag(NumberOfItems,)
+# Expected Result: 1 Items should be to the Shopping bag #
+Action: Value: Shopping Bag [0] retrieved successfully from Minibag Shoppingbag Link
+Action: Clicking on the Element: WCM Product Page &gt;add to shopping bag button
+Action: Waiting for Either one of the Elements Visible:
+Action:  ProductPage&gt;Insured product&gt;Confirmation &gt; OK button | 
+Action:  WCM Product Page &gt; mini bag | 
+Action: WCM Product Page &gt; mini bag Viewed Successfully
+# Actual Result: 1 Added successfully to the Minibag #
+
+^) Action Name: NavigateToShoppingBag()
+# Expected Result: Navigating to Product Shopping Bag Page #
+Action: Clicking on the Element: Header Shoppingbag Link
+Action: Waiting for Either one of the Elements Visible:
+Action:  Shopping Bag Page | 
+Action:  FLS page &gt; Go to checkout | 
+Action: Shopping Bag Page Viewed Successfully
+# Actual Result: Navigated to Shopping bag successfully #
+Action: Shopping Bag Page Verified successfully
+
+      --Shopping Bag Page page loaded succesfully--
+
+^) Action Name: ProceedToCheckout(IsBeautySampleItem,user,)
+# Expected Result: User should be able to Click on Checkout Button From Shopping Bag Page #
+Action: Clicking on the Element: Shoppingbag Page proceedtocheckout button
+Action: Waiting for Either one of the Elements Visible:
+Action:  Shopping Bag page&gt;No Beauty Modal | 
+Action:  Samples Page | 
+Action:  Address Setup Page | 
+Action:  Order Review Page | 
+Action:  Signin PopUp Modal from Shopping Bag Page | 
+Action:  Order Submit Page | 
+Action: Order Submit Page Viewed Successfully
+# Actual Result: Clicked on the Proceed tocheckout button successfully #
+Action: Order Submit Page Verified successfully
+
+      --Order Submit Page page loaded succesfully--
+
+^) Action Name: EnterCardNumber(strCardNumber,blnSaveCreditCard,)
+# Expected Result: Entering Card Details in Payment Component #
+Action: Order Submit Page &gt; Payment Component &gt; Credit card Textbox Verified successfully
+Action: Entering Value : '750081619' in the field: Order Submit Page &gt; Payment Component &gt; Credit card Textbox
+Action: Pressing the tab key for Order Submit Page &gt; Payment Component &gt; Credit card Textbox
+
+^) Action Name: ContinuePayment()
+# Expected Result: Proceeding from Payment Component #
+Action: Order Submit Page&gt; Payment Component&gt; Continue Button Verified successfully
+Action: You can review this order before it's final. verified successfully in the page
+Action: Clicking on the Element: Order Submit Page&gt; Payment Component&gt; Continue Button
+Action: Order Submit Page&gt; Payment Component&gt; Edit Button Verified successfully
+
+^) Action Name: ClickOnPlaceOrderButton(bolOrderSubmission,)
+# Expected Result: Verify User is able to place an order #
+Action: Waiting for Element: Order Submit Page&gt; Review Your Order&gt; Place Order Button Visible
+Action: Order Submit Page&gt; Review Your Order&gt; Place Order Button visible in the page Verified successfully
+
+      --Clicking on the 'Place Order' button--
+Action: Clicking on the Element: Order Submit Page&gt; Review Your Order&gt; Place Order Button
+Action: Waiting for Element: Order Confirmation Page Visible
+Action: Order Confirmation Page visible in the page Verified successfully
+# Actual Result: Place order button functionality verified successfully #
+
+--------------------------------------------------------------------------
+Web_Checkout_RegisteredUser   -   Passed
+--------------------------------------------------------------------------
+Action: Stopping Test..
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2e025859-57d8-4166-be56-a33cb7eec3e0" testId="183f5ddd-c4f6-a2bc-b482-efdd2a90004e" testName="Guest_CheckOut_Apply_NN_PlaceOrder" computerName="V00971807" duration="00:01:55.6207068" startTime="2015-08-24T06:05:30.8284421-07:00" endTime="2015-08-24T06:07:27.1134421-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e025859-57d8-4166-be56-a33cb7eec3e0">
+      <Output>
+        <DebugTrace>Test Started successfully..Please wait..
+Action: Cookie deleted successfully
+Action: Maximizing the window
+Action: Setting the focus on the current window
+Action: Waiting for the URL: http://y0319t481:8080/dataservice/getdata to get the response..
+
+^) Action Name: AtHomePage()
+# Expected Result: Home should be opened Successfully #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - fsr.s #
+Action: Verifying for cookie : fsr.s
+
+      --Deleting existing cookie and creating a new cookie with value - {"i":-1}--
+# Actual Result: Successfully created a cookie #
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - feat #
+Action: Verifying for cookie : feat
+
+      --Creating a new cookie--
+# Actual Result: Successfully created a cookie #
+Action: Home Page Verified successfully
+
+      --Home page loaded succesfully--
+# Actual Result: Home Page Opened Successfully #
+
+^) Action Name: NavigateToProductPage(StyleID,)
+# Expected Result: System should be Navigated to Product Page for SyleID: 2786802 #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/s/2786802
+Action: Waiting for Either one of the Elements Visible:
+Action:  Product Page | 
+Action:  WCM Product Page | 
+Action: WCM Product Page Viewed Successfully
+
+      --Retriving productname from the product Page--
+Action: Value: 'Rénergie' Anti-Wrinkle &amp; Firming Cream retrieved successfully from WCM Product Page Header Product Name Area
+
+      --ProductName: 'Rénergie' Anti-Wrinkle &amp; Firming Cream Retrieved successfully--
+# Actual Result: Navigated to Product Page with SyleID 2786802 Successfully #
+
+^) Action Name: SelectProductProperties(PriceFilter,Size,Color,Width,)
+# Expected Result: Select Product Properties as in TDM #
+
+      --Select the Product Size :2.5 Oz--
+Action: Clicking on the Element: 2.5 oz Size button
+
+      --Selecting the Product Width :2.5 oz--
+# Actual Result: Selected the product properties successfully #
+
+^) Action Name: AddItemToShoppingBag(NumberOfItems,)
+# Expected Result: 1 Items should be to the Shopping bag #
+Action: Value: Shopping Bag [0] retrieved successfully from Minibag Shoppingbag Link
+Action: Clicking on the Element: WCM Product Page &gt;add to shopping bag button
+Action: Waiting for Either one of the Elements Visible:
+Action:  ProductPage&gt;Insured product&gt;Confirmation &gt; OK button | 
+Action:  WCM Product Page &gt; mini bag | 
+Action: WCM Product Page &gt; mini bag Viewed Successfully
+# Actual Result: 1 Added successfully to the Minibag #
+
+^) Action Name: Checkout_Global_Click(addSamples,)
+# Expected Result: Clicking on the global Checkout button #
+Action: Clicking on the Element: Global Checkout Button
+Action: Waiting for Either one of the Elements Visible:
+Action:  Samples Page | 
+Action:  Shopping Bag Page | 
+Action:  Order Submit Page | 
+Action: Order Submit Page Viewed Successfully
+# Actual Result: Successfully clicked on Global checkout button #
+Action: Order Submit Page Verified successfully
+
+      --Order Submit Page page loaded succesfully--
+
+^) Action Name: ContinueAsGuest()
+# Expected Result: To click 'Continue as guest' button and verify that Login component becomes in informational state #
+Action: Order Submit Page&gt; Continue As Guest Button Verified successfully
+Action: Waiting for Element: Order Submit page &gt; Enter a Promotion Code link Not Visible
+Action: Order Submit page &gt; Enter a Promotion Code link is not visible is the page Verified successfully
+Action: Clicking on the Element: Order Submit Page&gt; Continue As Guest Button
+Action: Order Submit Page &gt; Login Component Verified successfully
+# Actual Result: Continue as guest clicked and login component turned to informational state Successfully #
+
+^) Action Name: EnterShippingAddress(FirstName,Middlename,Lastname,Address1,Address2,City,State,ZipCode,Phone,StateKeyStroke,)
+# Expected Result: User should be able to Enter Shipping address fields #
+Action: Waiting for Element: Order Submit Page &gt; First Name Textbox Visible
+Action: Order Submit Page &gt; First Name Textbox visible in the page Verified successfully
+Action: Entering Value : 'Anand' in the field: Order Submit Page &gt; First Name Textbox
+Action: Entering Value : '' in the field: Order Submit Page &gt; Middle Name Textbox
+Action: Entering Value : 'Mohan' in the field: Order Submit Page &gt; Last Name Textbox
+Action: Entering Value : '401 NE Northgate Way' in the field: Order Submit Page &gt; Address Textbox
+Action: Entering Value : '' in the field: Order Submit Page &gt; Address2 Textbox
+Action: Entering Value : 'Seattle' in the field: Order Submit Page &gt; City Textbox
+Action: Selecting the label text: 'Washington' from the Locator: Order Submit Page &gt; State Dropdown
+Action: Entering Value : '98125' in the field: Order Submit Page&gt; ZipCode Textbox
+Action: Entering Value : '9895320127' in the field: Order Submit Page&gt; Phone Number Textbox
+# Actual Result: Entered Shipping address successfully #
+
+^) Action Name: ContinueShippingAddress()
+# Expected Result: User should be able to click continue button in Shipping method component #
+Action: Clicking on the Element: Order Submit Page&gt; Continue Shipping address
+# Actual Result: Continue button clicked successfully in Shipping Address component #
+
+^) Action Name: ContinueShippingMethod()
+# Expected Result: User should be able to click continue button in Shipping method component #
+Action: Waiting for Element: Order Submit Page&gt; Continue Shipping Method Visible
+Action: Order Submit Page&gt; Continue Shipping Method visible in the page Verified successfully
+Action: Clicking on the Element: Order Submit Page&gt; Continue Shipping Method
+# Actual Result: Continue button clicked successfully in Shipping method component #
+
+^) Action Name: ApplyNordstromNote(NordstromNumber,AccessCode,)
+# Expected Result: Verify whether user is able to apply Norstrom Notes #
+Action: Clicking on the Element: Order Submit Page&gt; Payment Component, Apply a Nordstrom Note
+Action: Waiting for Element: Order Submit Page&gt; Payment Component, Note Number Textbox Visible
+Action: Order Submit Page&gt; Payment Component, Note Number Textbox visible in the page Verified successfully
+Action: Waiting for Element: Order Submit Page&gt; Payment Component, Access Code Textbox Visible
+Action: Order Submit Page&gt; Payment Component, Access Code Textbox visible in the page Verified successfully
+Action: Entering Value : '8024140000068964' in the field: Order Submit Page&gt; Payment Component, Note Number Textbox
+Action: Entering Value : '802' in the field: Order Submit Page&gt; Payment Component, Access Code Textbox
+Action: Clicking on the Element: Order Submit Page&gt; Payment Component, Nordstrom Note Apply Button
+Action: Waiting for Element: Order Submit Page&gt; Payment Component, Nordstrom Note Apply Button Not Visible
+
+--------------------------------------------------------------------------
+Guest_CheckOut_Apply_NN_PlaceOrder   -   Failed
+--------------------------------------------------------------------------
+Action: Stopping Test..
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method Nordstrom.Automation.Core.Tests.SmokeTests.BuildVerificationTests.Guest_CheckOut_Apply_NN_PlaceOrder threw exception: 
+System.Exception: || Expected Result : Verify whether user is able to apply Norstrom Notes ---|| Actual Result: Order Submit Page&gt; Payment Component, Nordstrom Note Apply Button is still Visble || </Message>
+          <StackTrace>    at Nordstrom.Automation.Framework.Core.Actions.AssertFail(String message) in c:\Builds\28\E-Commerce\Nordstrom.SecureUITest_Gated\src\Common\Test\Nordstrom.Automation.Framework\Framework\Core\Actions.cs:line 929
+   at Nordstrom.Automation.Framework.Core.Actions.WaitForElementNotVisible(LocatorObject _locator) in c:\Builds\28\E-Commerce\Nordstrom.SecureUITest_Gated\src\Common\Test\Nordstrom.Automation.Framework\Framework\Core\Actions.cs:line 2655
+   at Nordstrom.Automation.Core.Pages.OrderSubmitPage.ApplyNordstromNote(String NordstromNumber, String AccessCode) in c:\Builds\28\E-Commerce\Nordstrom.SecureUITest_Gated\src\Web\Test\UI\Pages\OrderSubmitPage.cs:line 1740
+   at Nordstrom.Automation.Core.Tests.SmokeTests.BuildVerificationTests.Guest_CheckOut_Apply_NN_PlaceOrder() in c:\Builds\28\E-Commerce\Nordstrom.SecureUITest_Gated\src\Web\Test\UI\Tests\SmokeTests\BuildVerificationTests.cs:line 703
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <CollectorDataEntries>
+        <Collector agentName="vstfs:///LabManagement/TestMachine/239" agentDisplayName="V00971807" isFromRemoteAgent="true" uri="datacollector://microsoft/VideoRecorder/1.0" collectorDisplayName="Screen and Voice Recorder">
+          <UriAttachments>
+            <UriAttachment>
+              <A href="V00971807\RecordedMedia.trmx">Screen capture metadata</A>
+            </UriAttachment>
+            <UriAttachment>
+              <A href="V00971807\ScreenCapture.wmv">Screen capture video</A>
+            </UriAttachment>
+          </UriAttachments>
+        </Collector>
+      </CollectorDataEntries>
+    </UnitTestResult>
+    <UnitTestResult executionId="d8946d82-49ac-4afa-9c4f-9ad5b8e8aea0" testId="a414c5b4-a75a-a32b-363f-62df7fd081a9" testName="Guest_CheckOut_WishListItem_Checkout" computerName="V00971807" duration="00:02:24.5409672" startTime="2015-08-24T06:07:27.4104421-07:00" endTime="2015-08-24T06:09:52.4774421-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8946d82-49ac-4afa-9c4f-9ad5b8e8aea0">
+      <Output>
+        <DebugTrace>Test Started successfully..Please wait..
+Action: Cookie deleted successfully
+Action: Maximizing the window
+Action: Setting the focus on the current window
+Action: Waiting for the URL: http://y0319t481:8080/dataservice/getdata to get the response..
+
+^) Action Name: AtHomePage()
+# Expected Result: Home should be opened Successfully #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - fsr.s #
+Action: Verifying for cookie : fsr.s
+
+      --Deleting existing cookie and creating a new cookie with value - {"i":-1}--
+# Actual Result: Successfully created a cookie #
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - feat #
+Action: Verifying for cookie : feat
+
+      --Creating a new cookie--
+# Actual Result: Successfully created a cookie #
+Action: Home Page Verified successfully
+
+      --Home page loaded succesfully--
+# Actual Result: Home Page Opened Successfully #
+
+^) Action Name: NavigateSignInPage()
+# Expected Result: User should be able to Navigate to Sign In Page #
+Action: Clicking on the Element: Homepage Global Signin Link
+Action: Signin Page Verified successfully
+
+      --Sign In page loaded succesfully--
+# Actual Result: User Navigated to SignIn Page Successfully #
+
+^) Action Name: CreateAccount(strFirstName,strEmail,strPassword,strZipCode,strGender,)
+# Expected Result: User should be able to Create an Account #
+Action: Entering Value : 'Anand' in the field: Sign In Page, New Customer&gt; First Name Text box
+Action: Entering Value : '201508240735jerine3@test.com' in the field: Sign In Page, New Customer&gt; Email Text box
+Action: Entering Value : '201508240735jerine3@test.com' in the field: Sign In Page, New Customer&gt; Email Confirm Text box
+Action: Entering Value : 'Password1' in the field: Sign In Page, New Customer&gt; Password Text box
+Action: Entering Value : 'Password1' in the field: Sign In Page, New Customer&gt; Password Confirm Text box
+Action: Entering Value : '98125' in the field: Sign In Page, New Customer&gt; Zip Code Text box
+Action: Selecting the label text: 'Male' from the Locator: Sign In Page, New Customer&gt; Gender Drop Down List
+Action: Clicking on the Element: Sign In Page, New Customer&gt; Create Account Button
+Action: Header Signout button &gt; Sign Out Verified successfully
+# Actual Result: Created an Account Successfully #
+
+^) Action Name: AddNewAddress(strFirstName,strLastName,strAddress1,strAddress2,strCity,strState,strZipCode,strCountry,strPhoneNumber,strpassword,)
+# Expected Result: User should be able to Add a new address #
+Action: Waiting for Element: Link To List of Address and phone Numbers Available Visible
+Action: Link To List of Address and phone Numbers Available visible in the page Verified successfully
+Action: Clicking on the Element: Link To List of Address and phone Numbers Available
+Action: Waiting for Element: Link to Add New Address Visible
+Action: Link to Add New Address visible in the page Verified successfully
+Action: Clicking on the Element: Link to Add New Address
+Action: Waiting for Either one of the Elements Visible:
+Action:  Link to Add New Address | 
+Action:  Account Summary Page&gt;Address Modal&gt;Address Firstname Textbox | 
+Action: Account Summary Page&gt;Address Modal&gt;Address Firstname Textbox Viewed Successfully
+Action: Entering Value : 'Anand' in the field: Account Summary Page&gt;Address Modal&gt;Address Firstname Textbox
+Action: Entering Value : 'Mohan' in the field: Account Summary Page&gt;Address Modal&gt; Lastname Textbox
+Action: Entering Value : '401 NE Northgate Way' in the field: Account Summary Page&gt;Address Modal&gt; Address Line1 Textbox
+Action: Entering Value : '' in the field: Account Summary Page&gt;Address Modal&gt;Address Line2 Textbox
+Action: Entering Value : 'Seattle' in the field: Account Summary Page&gt;Address Modal&gt; City Textbox
+Action: Selecting the label text: 'Washington' from the Locator: Account Summary Page&gt;Address Modal&gt; State Dropdownlist
+Action: Entering Value : '98125' in the field: Account Summary Page&gt;Address Modal&gt; Zipcode Textbox
+Action: Selecting the label text: 'United States' from the Locator: Account Summary Page&gt;Address Modal&gt; Country Dropdownlist
+Action: Entering Value : '9895320127' in the field: Account Summary Page&gt;Address Modal&gt; PhoneNumber Textbox
+
+      --Waiting For One Moment Image to Disappear--
+Action: Waiting for Element: One Moment Image Showing while doing a transaction Not Visible
+Action: One Moment Image Showing while doing a transaction is not visible is the page Verified successfully
+Action: Waiting for Either one of the Elements Visible:
+Action:  AccountInfo Page&gt; Address Suggestion Popup &gt; use button | 
+Action:  Account Summary Page&gt;Remove Link | 
+Action: Account Summary Page&gt;Remove Link Viewed Successfully
+# Actual Result: New adddress added successfully #
+
+^) Action Name: NavigateToProductPage(StyleID,)
+# Expected Result: System should be Navigated to Product Page for SyleID: 2912074 #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/s/2912074
+Action: Waiting for Either one of the Elements Visible:
+Action:  Product Page | 
+Action:  WCM Product Page | 
+Action: WCM Product Page Viewed Successfully
+
+      --Retriving productname from the product Page--
+Action: Value: 'Absolue' Premium ßx Absolute Replenishing Lotion SPF 15 retrieved successfully from WCM Product Page Header Product Name Area
+
+      --ProductName: 'Absolue' Premium ßx Absolute Replenishing Lotion SPF 15 Retrieved successfully--
+# Actual Result: Navigated to Product Page with SyleID 2912074 Successfully #
+
+^) Action Name: SelectProductProperties(PriceFilter,Size,Color,Width,)
+# Expected Result: Select Product Properties as in TDM #
+
+      --Select the Product Size :One Size--
+
+      --Selecting the Product Width :One Size--
+# Actual Result: Selected the product properties successfully #
+
+^) Action Name: AddItemToWishList(NumberOfItems,)
+# Expected Result: Add 1 Item to the Wish List #
+Action: Clicking on the Element: Product Page&gt;Add to WishList Button
+Action: Waiting for Either one of the Elements Visible:
+Action:  Product Page&gt;Confiramtion Popup&gt;View Wishlist Button | 
+Action:  This item has an approximate ship date POPUP OK Button | 
+Action:  Wishlist Sign In Page &gt; Header | 
+Action:  Wishlist page | 
+Action: Product Page&gt;Confiramtion Popup&gt;View Wishlist Button Viewed Successfully
+Action: Clicking on the Element: Product Page&gt;Confiramtion Popup&gt;View Wishlist Button
+# Actual Result: 1Items added to wishlist successfully #
+
+^) Action Name: AddShippingAddress(user,)
+# Expected Result: User should be able to Add a New Shipping Address #
+Action: Waiting for Either one of the Elements Visible:
+Action:  WishList PAge&gt;Add Address Link | 
+Action:  WishList page&gt;Edit Link | 
+Action:  WishList page&gt;Login Modal | 
+Action: WishList PAge&gt;Add Address Link Viewed Successfully
+Action: Clicking on the Element: WishList PAge&gt;Add Address Link
+Action: Waiting for Either one of the Elements Visible:
+Action:  WishList page&gt;Login Modal | 
+Action:  WishList Page&gt;Add Address Modal | 
+Action: WishList page&gt;Login Modal Viewed Successfully
+
+^) Action Name: WishListLogin(user,)
+# Expected Result: User should be able to Login to wishlist due to timeout #
+Action: Entering Value : 'Password1' in the field: Password Textbox of Sign-in Modal
+Action: Clicking on the Element: Signin Button of Sign-in Modal
+# Actual Result: Logged in wishlist due to timeout successfully #
+Action: Waiting for Element: WishList Page&gt;Add Address Modal Visible
+Action: WishList Page&gt;Add Address Modal visible in the page Verified successfully
+Action: Entering Value : 'Anand' in the field: WishList Page&gt;Add Address Modal&gt;FirstName TextBox
+Action: Entering Value : 'Mohan' in the field: WishList Page&gt;Add Address Modal&gt;LastName TextBox
+Action: Entering Value : '401 NE Northgate Way' in the field: WishList Page&gt;Add Address Modal&gt;AddressTextBox
+Action: Entering Value : 'Seattle' in the field: WishList Page&gt;Add Address Modal&gt;City TextBox
+Action: Selecting the label text: 'Washington' from the Locator: WishList Page&gt;Add Address Modal&gt;State Dropdown
+Action: Entering Value : '98125' in the field: WishList Page&gt;Add Address Modal&gt;Zipcode TextBox
+Action: Clicking on the Element: WishList Page&gt;Add Address Modal&gt;Save Button
+Action: WishList page&gt;Edit Link Verified successfully
+# Actual Result: New shipping address has been added successfully #
+
+^) Action Name: SetWLPrivacy(blnIsPublic,user,)
+# Expected Result: User should be able to make Privacy Setting to Public #
+Action: Clicking on the Element: WishListPAge&gt;Make It Public Link
+
+      --Waiting For One Moment Image to Disappear--
+Action: Waiting for Element: One Moment Image Showing while doing a transaction Not Visible
+Action: One Moment Image Showing while doing a transaction is not visible is the page Verified successfully
+Action: Waiting for Either one of the Elements Visible:
+Action:  WishList page&gt;Login Modal | 
+Action:  Wislist Page&gt;Privacy Setting Modal | 
+Action: Wislist Page&gt;Privacy Setting Modal Viewed Successfully
+Action: Entering Value : 'Mohan' in the field: WishList page&gt;Privacy Modal&gt;LastName TextBox
+Action: Entering Value : 'Seattle' in the field: WishList page&gt;Privacy Modal&gt;LastName TextBox
+Action: Selecting the label text: 'Washington' from the Locator: WishList page&gt;Privacy Modal&gt;State DropDown
+Action: Waiting for Element: WishList page&gt;Privacy Modal&gt;Save Button Visible
+Action: WishList page&gt;Privacy Modal&gt;Save Button visible in the page Verified successfully
+Action: Clicking on the Element: WishList page&gt;Privacy Modal&gt;Save Button
+Action: Public verified successfully in the locator WishList Page&gt;Privacy setting Public Label
+# Actual Result: Privacy has been set to Public successfully #
+
+^) Action Name: SignOut()
+# Expected Result: Signing out from the Application #
+Action: Waiting for Either one of the Elements Visible:
+Action:  Header Signout button &gt; Sign Out | 
+Action:  Header Signout button &gt; Not You | 
+Action: Header Signout button &gt; Sign Out Viewed Successfully
+
+      --Clicking on 'Sign out'--
+Action: Clicking on the Element: Header Signout button &gt; Sign Out
+Action: Waiting for Element: Home Page Visible
+Action: Home Page visible in the page Verified successfully
+# Actual Result: Successfully signed out from the application #
+
+      --Navigating to Wishlist page--
+Action: Clicking on the Element: Global header &gt; Wish list link
+Action: Waiting for Either one of the Elements Visible:
+Action:  Wishlist page | 
+Action:  Wishlist Registration page | 
+Action: Wishlist Registration page Viewed Successfully
+Action: Wishlist Registration page Verified successfully
+
+      --WishList Registration page loaded succesfully--
+
+^) Action Name: FindWishList(strEmail,)
+# Expected Result: User should be able to Find a WishList #
+Action: Clicking on the Element: WishList Page&gt;Find WishList Button
+Action: WishList Search Results Page Verified successfully
+
+      --Wish List Search Results page loaded succesfully--
+Action: Entering Value : '201508240735jerine3@test.com' in the field: WishList Search ResultsPage&gt;Email TextBox
+Action: Clicking on the Element: WishList Search ResultsPage&gt;Go Button
+Action: 201508240735jerine3@test.com verified successfully in the locator WishList Search ResultsPage&gt;SearchCriteria Label
+Action: Clicking on the Element: WishList Search ResultsPage&gt;SearchResults Table&gt;Name Link
+Action: Wishlist page Verified successfully
+
+      --WishList page loaded succesfully--
+# Actual Result: WishList page of 201508240735jerine3@test.com found successfully #
+
+^) Action Name: AddWishlistItemToShoppingBag()
+# Expected Result: User should be able to Add an item from wishlist to shopping bag #
+Action: Add to Shopping Bag verified successfully in the locator WishList page &gt; Add to shopping bag button/Added to shopping bag button
+Action: Clicking on the Element: WishList page &gt; Add to shopping bag button/Added to shopping bag button
+Action: Waiting for Either one of the Elements Visible:
+Action:  WishList page &gt; Qunatity Adjust popup &gt; continue button | 
+Action:  WishList page &gt; Add to shopping bag button/Added to shopping bag button | 
+Action: WishList page &gt; Add to shopping bag button/Added to shopping bag button Viewed Successfully
+Action: Added to Shopping Bag verified successfully in the locator WishList page &gt; Add to shopping bag button/Added to shopping bag button
+
+^) Action Name: NavigateToShoppingBag()
+# Expected Result: Navigating to Product Shopping Bag Page #
+Action: Clicking on the Element: Header Shoppingbag Link
+Action: Waiting for Either one of the Elements Visible:
+Action:  Shopping Bag Page | 
+Action:  FLS page &gt; Go to checkout | 
+Action: Shopping Bag Page Viewed Successfully
+# Actual Result: Navigated to Shopping bag successfully #
+# Actual Result: Added an item from wishlist to shopping bag successfully #
+
+^) Action Name: NavigateToShoppingBag()
+# Expected Result: Navigating to Product Shopping Bag Page #
+Action: Clicking on the Element: Header Shoppingbag Link
+Action: Waiting for Either one of the Elements Visible:
+Action:  Shopping Bag Page | 
+Action:  FLS page &gt; Go to checkout | 
+Action: Shopping Bag Page Viewed Successfully
+# Actual Result: Navigated to Shopping bag successfully #
+Action: Shopping Bag Page Verified successfully
+
+      --Shopping Bag Page page loaded succesfully--
+
+^) Action Name: Checkout_Global_Click(addSamples,)
+# Expected Result: Clicking on the global Checkout button #
+Action: Clicking on the Element: Global Checkout Button
+Action: Waiting for Either one of the Elements Visible:
+Action:  Samples Page | 
+Action:  Shopping Bag Page | 
+Action:  Order Submit Page | 
+Action: Order Submit Page Viewed Successfully
+# Actual Result: Successfully clicked on Global checkout button #
+Action: Order Submit Page Verified successfully
+
+      --Order Submit Page page loaded succesfully--
+
+^) Action Name: ContinueAsGuest()
+# Expected Result: To click 'Continue as guest' button and verify that Login component becomes in informational state #
+Action: Order Submit Page&gt; Continue As Guest Button Verified successfully
+Action: Waiting for Element: Order Submit page &gt; Enter a Promotion Code link Not Visible
+Action: Order Submit page &gt; Enter a Promotion Code link is not visible is the page Verified successfully
+Action: Clicking on the Element: Order Submit Page&gt; Continue As Guest Button
+Action: Order Submit Page &gt; Login Component Verified successfully
+# Actual Result: Continue as guest clicked and login component turned to informational state Successfully #
+
+^) Action Name: ContinueWLShippingAddress()
+# Expected Result: User should be able to click continue button for Wislist address in Shipping method component #
+Action: Waiting for Element: Order Submit Page&gt; Wishlist Continue Shipping address Visible
+Action: Order Submit Page&gt; Wishlist Continue Shipping address visible in the page Verified successfully
+Action: Clicking on the Element: Order Submit Page&gt; Wishlist Continue Shipping address
+# Actual Result: Continue button clicked successfully in Shipping method component #
+
+^) Action Name: ContinueShippingMethod()
+# Expected Result: User should be able to click continue button in Shipping method component #
+Action: Waiting for Element: Order Submit Page&gt; Continue Shipping Method Visible
+Action: Order Submit Page&gt; Continue Shipping Method visible in the page Verified successfully
+Action: Clicking on the Element: Order Submit Page&gt; Continue Shipping Method
+# Actual Result: Continue button clicked successfully in Shipping method component #
+
+^) Action Name: EnterCardNumber(strCardNumber,blnSaveCreditCard,)
+# Expected Result: Entering Card Details in Payment Component #
+Action: Order Submit Page &gt; Payment Component &gt; Credit card Textbox Verified successfully
+Action: Entering Value : '750081619' in the field: Order Submit Page &gt; Payment Component &gt; Credit card Textbox
+Action: Pressing the tab key for Order Submit Page &gt; Payment Component &gt; Credit card Textbox
+
+^) Action Name: EnterBillingAddress(FirstName,Middlename,Lastname,Address1,Address2,City,State,ZipCode,Country,StateKeyStroke,)
+# Expected Result: Verifying if Billing address fields are visible and  user can enter billing address. #
+Action: Entering Value : 'Anand' in the field: Order Submit Page&gt; Payment Component&gt; Billing Address first name textbox
+Action: Entering Value : '' in the field: Order Submit Page&gt; Payment Component&gt; Billing Address middle name textbox
+Action: Entering Value : 'Mohan' in the field: Order Submit Page&gt; Payment Component&gt; Billing Address last name textbox
+Action: Entering Value : '401 NE Northgate Way' in the field: Order Submit Page&gt; Payment Component&gt; Billing Address address line 1 textbox
+Action: Entering Value : '' in the field: Order Submit Page&gt; Payment Component&gt; Billing Address address line 2 textbox
+Action: Entering Value : 'Seattle' in the field: Order Submit Page&gt; Payment Component&gt; Billing Address city textbox
+Action: Selecting the label text: 'Washington' from the Locator: Order Submit Page&gt; Payment Component&gt; Billing Address state dropdown
+Action: Selecting the label text: 'United States' from the Locator: Order Submit Page&gt; Payment Component&gt; Billing Address country dropdown
+Action: Entering Value : '98125' in the field: Order Submit Page&gt; Payment Component&gt; Billing Address zipcode textbox
+Action: ZIP/Postal Code verified successfully in the locator Order Submit Page&gt; Payment Component&gt; Zip/Postal Code label
+# Actual Result: Billing address fields are present and user can enter billing address #
+
+^) Action Name: EnterContactDetailsInPayment(strEmailID,strPhoneNo,)
+# Expected Result: Verifying is user can enter contact details #
+Action: Entering Value : 'jerine3@test.com' in the field: Order submit page&gt;Contact details&gt;Enter email id
+Action: Entering Value : '9895320127' in the field: Order submit page&gt;Contact details&gt;Enter Phone number
+# Actual Result: User entered contact details #
+
+^) Action Name: ContinuePayment()
+# Expected Result: Proceeding from Payment Component #
+Action: Order Submit Page&gt; Payment Component&gt; Continue Button Verified successfully
+Action: You can review this order before it's final. verified successfully in the page
+Action: Clicking on the Element: Order Submit Page&gt; Payment Component&gt; Continue Button
+Action: Order Submit Page&gt; Payment Component&gt; Edit Button Verified successfully
+
+^) Action Name: SaveYourInfoSkip(blnSaveCreditCard,)
+# Expected Result: Skipping Save Your Info Functionality #
+Action: Clicking on the Element: Order Submit Page&gt; Save Your Info&gt; Skip Button
+Action: You have chosen not to create a Nordstrom.com account. verified successfully in the locator Order Submit Page&gt; Save Your Info section informational state label(create/skip account)
+Action: Waiting for Element: Order Submit Page&gt; Review Your Order&gt; Place Order Button Visible
+Action: Order Submit Page&gt; Review Your Order&gt; Place Order Button visible in the page Verified successfully
+# Actual Result: Save Your Info Skipped #
+
+^) Action Name: ClickOnPlaceOrderButton(bolOrderSubmission,)
+# Expected Result: Verify User is able to place an order #
+Action: Waiting for Element: Order Submit Page&gt; Review Your Order&gt; Place Order Button Visible
+Action: Order Submit Page&gt; Review Your Order&gt; Place Order Button visible in the page Verified successfully
+
+      --Clicking on the 'Place Order' button--
+Action: Clicking on the Element: Order Submit Page&gt; Review Your Order&gt; Place Order Button
+Action: Waiting for Element: Order Confirmation Page Visible
+Action: Order Confirmation Page visible in the page Verified successfully
+# Actual Result: Place order button functionality verified successfully #
+Action: Order Confirmation Page Verified successfully
+
+      --Order confirmation page page loaded succesfully--
+
+^) Action Name: VerifyOrderConfirmationPage(user,)
+# Expected Result: To verify Order Confirmation Page #
+Action: Orderconfirmation page &gt; Print Itemized Receipt Button Verified successfully
+Action: Thanks for your order, number verified successfully in the page
+Action: Value: Thanks for your order, number 758882232, placed on 08/24/2015. retrieved successfully from Orderconfirmation page &gt; Order Confirmation Message
+
+      --The Created order number is758882232--
+Action: A confirmation email will be sent to verified successfully in the page
+# Actual Result: Verified Order Confirmation Page successfully #
+
+--------------------------------------------------------------------------
+Guest_CheckOut_WishListItem_Checkout   -   Passed
+--------------------------------------------------------------------------
+Action: Stopping Test..
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

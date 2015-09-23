@@ -1,0 +1,25 @@
+﻿@model Dictionary<string, int>
+
+@{
+    ViewBag.Title = "Index";
+}   
+
+    <div class="jumbotron">
+        <h2>Loyalty Web Test Result/Environment Volatility Measurement</h2>
+
+        <p>
+            When considering T environment volatility, we may find it difficult to decide
+            How good or bad. This page is to provide a volatility measure for that purpose;
+            Also we want to know the Loyalty web test pass/fail status during a period of time.
+        </p>
+
+    </div>    
+    
+    <h4>The total test: @Model["total"]</h4>
+    <h4>The passed test: @Model["passed"]</h4>
+    <h4>The failed test: @Model["failed"]</h4>    
+
+<div id="chart"></div> 
+<footer>  T environment volatility measurement from Loyalty Web Team  </footer>
+
+

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e20121d4-31f3-49b9-98ec-59c18bd9c3c7" name="x76w@V00971807 2015-08-24 08:36:43" runUser="NORD\x76w" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="eComm_Secure_TEnv_Chrome" id="6716fe22-f05a-4e9f-b0b8-0667a15d0db5">
+    <Deployment userDeploymentRoot="C:\Users\X76W\AppData\Local\VSEQT\QTController\rm\9072" useDefaultDeploymentRoot="false" runDeploymentRoot="x76w_V00971807 2015-08-24 08_36_43" />
+    <Scripts setupScript="\\a0319p871\Builds\SeleniumDrivers\TEnv_Chrome\CopyTestRunConfig.bat" />
+    <RemoteController name="V00971807:6901" />
+    <Execution location="Remote">
+      <TestTypeSpecific />
+      <AgentRule name="Desktop Client">
+        <SelectionCriteria>
+          <AgentProperty name="__Test Environment" value="E-Commerce.0.Srini Local Env" />
+          <AgentProperty name="__Machine Role" value="Desktop Client" />
+        </SelectionCriteria>
+        <DataCollectors>
+          <DataCollector uri="datacollector://microsoft/VideoRecorder/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen and Voice Recorder">
+            <Configuration>
+              <MediaRecorder sendRecordedMediaForPassedTestCase="false" xmlns="" />
+            </Configuration>
+          </DataCollector>
+        </DataCollectors>
+      </AgentRule>
+    </Execution>
+    <Properties />
+  </TestSettings>
+  <Times creation="2015-08-24T08:36:43.8034841-07:00" queuing="2015-08-24T08:37:00.3051341-07:00" start="2015-08-24T08:37:00.5051541-07:00" finish="2015-08-24T08:39:29.5570578-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="V00971807" outcome="Warning" timestamp="2015-08-24T08:37:00.0721108-07:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'Interop.TDAPIOLELib' directly or indirectly referenced by the test container '\\a0319p871\nordbuild\buildoutput\nordstrom.secureuitest_gated\nordstrom.secureuitest_gated_20150707.4\nordstrom.automation.projects.core.dll' was not found.</Text>
+      </RunInfo>
+    </RunInfos>
+    <DataCollectorMessages>
+      <DataCollectorMessage timestamp="2015-08-24T08:37:04.1495185-07:00" dataCollectorUri="datacollector://microsoft/VideoRecorder/1.0" dataCollectorFriendlyName="Screen and Voice Recorder" agentName="V00971807" level="Warning">
+        <Text>The computer 'V00971807' has more than one display. By default, only the screen from the primary display will be recorded. Run your application in this display. To know the primary display, you can use the Screen Resolution applet in Control Panel.</Text>
+      </DataCollectorMessage>
+    </DataCollectorMessages>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Guest_CheckOut_Apply_NN_PlaceOrder" storage="\\a0319p871\nordbuild\buildoutput\nordstrom.secureuitest_gated\nordstrom.secureuitest_gated_20150707.4\nordstrom.automation.projects.core.dll" id="183f5ddd-c4f6-a2bc-b482-efdd2a90004e">
+      <Description>Guest user applies NN &amp; GC and place order </Description>
+      <TestCategory>
+        <TestCategoryItem TestCategory="BVT1" />
+        <TestCategoryItem TestCategory="BVT_SECURE" />
+      </TestCategory>
+      <DeploymentItems>
+        <DeploymentItem filename="TestRunConfig" outputDirectory=".\TestRunConfig" />
+        <DeploymentItem filename="TestData" outputDirectory=".\TestData" />
+      </DeploymentItems>
+      <TcmInformation testCaseId="17073" testRunId="9072" testResultId="100003" />
+      <Execution id="2ede4990-c628-4dde-94aa-117d93bcc5f1" />
+      <Properties>
+        <Property>
+          <Key>__Tfs_BuildUri__</Key>
+          <Value>vstfs:///Build/Build/12924</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_IsInLabEnvironment__</Key>
+          <Value>true</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestRunId__</Key>
+          <Value>9072</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestCaseId__</Key>
+          <Value>17073</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TeamProject__</Key>
+          <Value>E-Commerce</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildDirectory__</Key>
+          <Value>\\a0319p871\NordBuild\BuildOutput\Nordstrom.SecureUITest_Gated\Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_LabEnvironment__</Key>
+          <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;LabEnvironment Id="2c8ea7a6-d3f9-4757-931c-4e77145b95f0" Name="Srini Local Env" Uri="vstfs:///LabManagement/LabEnvironment/240"&gt;&lt;LabSystems&gt;&lt;LabSystem Name="V00971807" ComputerName="V00971807" Roles="Desktop Client"&gt;&lt;CustomProperties /&gt;&lt;/LabSystem&gt;&lt;/LabSystems&gt;&lt;/LabEnvironment&gt;</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationId__</Key>
+          <Value>21</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPlanId__</Key>
+          <Value>12381</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestConfigurationName__</Key>
+          <Value>Windows 8</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TestPointId__</Key>
+          <Value>27409</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_TfsServerCollectionUrl__</Key>
+          <Value>http://ecomtfs:8080/tfs/defaultcollection</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildPlatform__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildNumber__</Key>
+          <Value>Nordstrom.SecureUITest_Gated_20150707.4</Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildFlavor__</Key>
+          <Value>
+          </Value>
+        </Property>
+        <Property>
+          <Key>__Tfs_BuildConfigurationId__</Key>
+          <Value>8459</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="file://a0319p871/NordBuild/BuildOutput/Nordstrom.SecureUITest_Gated/Nordstrom.SecureUITest_Gated_20150707.4/Nordstrom.Automation.Projects.Core.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Nordstrom.Automation.Core.Tests.SmokeTests.BuildVerificationTests, Nordstrom.Automation.Projects.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Guest_CheckOut_Apply_NN_PlaceOrder" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="183f5ddd-c4f6-a2bc-b482-efdd2a90004e" executionId="2ede4990-c628-4dde-94aa-117d93bcc5f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <TcmInformation testCaseId="17073" testRunId="9072" testResultId="100003" />
+    </TestEntry>
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="2ede4990-c628-4dde-94aa-117d93bcc5f1" testId="183f5ddd-c4f6-a2bc-b482-efdd2a90004e" testName="Guest_CheckOut_Apply_NN_PlaceOrder" computerName="V00971807" duration="00:02:24.0894232" startTime="2015-08-24T08:37:04.5945630-07:00" endTime="2015-08-24T08:39:29.3790400-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ede4990-c628-4dde-94aa-117d93bcc5f1">
+      <Output>
+        <DebugTrace>Test Started successfully..Please wait..
+Action: Cookie deleted successfully
+Action: Maximizing the window
+Action: Setting the focus on the current window
+Action: Waiting for the URL: http://y0319t481:8080/dataservice/getdata to get the response..
+
+^) Action Name: AtHomePage()
+# Expected Result: Home should be opened Successfully #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - fsr.s #
+Action: Verifying for cookie : fsr.s
+
+      --Deleting existing cookie and creating a new cookie with value - {"i":-1}--
+# Actual Result: Successfully created a cookie #
+
+^) Action Name: CreateCookie(strCookieName,strValue,strDomain,strPath,Expiry,)
+# Expected Result: Creating a new cookie - feat #
+Action: Verifying for cookie : feat
+
+      --Creating a new cookie--
+# Actual Result: Successfully created a cookie #
+Action: Home Page Verified successfully
+
+      --Home page loaded succesfully--
+# Actual Result: Home Page Opened Successfully #
+
+^) Action Name: NavigateToProductPage(StyleID,)
+# Expected Result: System should be Navigated to Product Page for SyleID: 2808998 #
+Action: Opening Page : http://Tshop.dev.nordstrom.com/s/2808998
+Action: Waiting for Either one of the Elements Visible:
+Action:  Product Page | 
+Action:  WCM Product Page | 
+Action: WCM Product Page Viewed Successfully
+
+      --Retriving productname from the product Page--
+Action: Value: Almost Lipstick retrieved successfully from WCM Product Page Header Product Name Area
+
+      --ProductName: Almost Lipstick Retrieved successfully--
+# Actual Result: Navigated to Product Page with SyleID 2808998 Successfully #
+
+^) Action Name: SelectProductProperties(PriceFilter,Size,Color,Width,)
+# Expected Result: Select Product Properties as in TDM #
+
+      --Select the Product Size :One Size--
+
+      --Selecting the Product Width :One Size--
+
+      --Selecting the Product Color :Black Honey--
+Action: Selecting the label text: 'Black Honey' from the Locator: WCM Productpage SKU Color Drop Down List
+# Actual Result: Selected the product properties successfully #
+
+^) Action Name: AddItemToShoppingBag(NumberOfItems,)
+# Expected Result: 1 Items should be to the Shopping bag #
+Action: Value: Shopping Bag [0] retrieved successfully from Minibag Shoppingbag Link
+Action: Clicking on the Element: WCM Product Page &gt;add to shopping bag button
+Action: Waiting for Either one of the Elements Visible:
+Action:  ProductPage&gt;Insured product&gt;Confirmation &gt; OK button | 
+Action:  WCM Product Page &gt; mini bag | 
+Action: WCM Product Page &gt; mini bag Viewed Successfully
+# Actual Result: 1 Added successfully to the Minibag #
+
+^) Action Name: Checkout_Global_Click(addSamples,)
+# Expected Result: Clicking on the global Checkout button #
+Action: Clicking on the Element: Global Checkout Button
+
+--------------------------------------------------------------------------
+Guest_CheckOut_Apply_NN_PlaceOrder   -   Failed
+--------------------------------------------------------------------------
+Action: Stopping Test..
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method Nordstrom.Automation.Core.Tests.SmokeTests.BuildVerificationTests.Guest_CheckOut_Apply_NN_PlaceOrder threw exception: 
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:52787/session/bc2519e692ee64244d7582b4353a6eb9/execute timed out after 60 seconds. ---&gt; System.Net.WebException: The operation has timed out</Message>
+          <StackTrace>    at System.Net.HttpWebRequest.GetResponse()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.CreateResponse(WebRequest request)
+ --- End of inner exception stack trace ---
+    at OpenQA.Selenium.Remote.HttpCommandExecutor.CreateResponse(WebRequest request)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.ExecuteScriptCommand(String script, String commandName, Object[] args)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.ExecuteScript(String script, Object[] args)
+   at Nordstrom.Automation.Framework.Core.Actions.&lt;&gt;c__DisplayClassb.&lt;WaitForPageRefresh&gt;b__9(IWebDriver d) in c:\Builds\28\E-Commerce\Nordstrom.SecureUITest_Gated\src\Common\Test\Nordstrom.Automation.Framework\Framework\Core\Actions.cs:line 2138
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at Nordstrom.Automation.Framework.Core.Actions.WaitForPageRefresh() in c:\Builds\28\E-Commerce\Nordstrom.SecureUITest_Gated\src\Common\Test\Nordstrom.Automation.Framework\Framework\Core\Actions.cs:line 2175
+   at Nordstrom.Automation.Framework.Core.Actions.ClickAndWait(LocatorObject _locator) in c:\Builds\28\E-Commerce\Nordstrom.SecureUITest_Gated\src\Common\Test\Nordstrom.Automation.Framework\Framework\Core\Actions.cs:line 203
+   at Nordstrom.Automation.Core.Pages.NordMasterPage.Checkout_Global_Click(Boolean addSamples) in c:\Builds\28\E-Commerce\Nordstrom.SecureUITest_Gated\src\Web\Test\UI\Pages\NordMasterPage.cs:line 1800
+   at Nordstrom.Automation.Core.Tests.SmokeTests.BuildVerificationTests.Guest_CheckOut_Apply_NN_PlaceOrder() in c:\Builds\28\E-Commerce\Nordstrom.SecureUITest_Gated\src\Web\Test\UI\Tests\SmokeTests\BuildVerificationTests.cs:line 703
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <CollectorDataEntries>
+        <Collector agentName="vstfs:///LabManagement/TestMachine/239" agentDisplayName="V00971807" isFromRemoteAgent="true" uri="datacollector://microsoft/VideoRecorder/1.0" collectorDisplayName="Screen and Voice Recorder">
+          <UriAttachments>
+            <UriAttachment>
+              <A href="V00971807\RecordedMedia.trmx">Screen capture metadata</A>
+            </UriAttachment>
+            <UriAttachment>
+              <A href="V00971807\ScreenCapture.wmv">Screen capture video</A>
+            </UriAttachment>
+          </UriAttachments>
+        </Collector>
+      </CollectorDataEntries>
+    </UnitTestResult>
+  </Results>
+</TestRun>

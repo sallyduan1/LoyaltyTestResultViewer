@@ -1,0 +1,8 @@
+﻿Stage 0: set up db
+
+1. New MVC project named LoyaltyTestResultViewer
+2. Under App_Data, right click to add a sql database called Report.mdf 
+On Server Explorer find the mdf file and right click the Table, "add new table". In table designer define the column.
+
+stage 1: connect to db and write data to db
+http://www.asp.net/mvc/overview/getting-started/introduction/creating-a-connection-string
