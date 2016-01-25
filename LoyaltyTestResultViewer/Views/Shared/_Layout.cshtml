@@ -6,8 +6,13 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-  
+    <script>
+    $(function () {
+        $("#ViewerDatepicker").datepicker();
+    });
+    </script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+
 </head>
 <body>
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -37,36 +42,28 @@
             @RenderBody()
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - Test Team Point of View</p>
+                <p>&copy; @DateTime.Now- Test Team Point of View</p>
             </footer>
         </div>
-  
+           
         <div id="chart"></div>
         <script type="text/javascript">
         google.load("visualization", "1", { packages: ["corechart"] });
         google.setOnLoadCallback(drawChart);
         function drawChart() {
-            //var data = google.visualization.arrayToDataTable([
-            //  ['Task', 'Hours per Day'],
-            //  ['passed', 11],
-            //  ['fail', 2],
-            //]);
-            //todo: how to pass the controller data to javascript
-
-            var jsonData = $.ajax({
+                var jsonData = $.ajax({
                 type: "POST",
-                url: '@Url.Action("MyJson","VolatilityMeasure")',
+                url: '@Url.Action("OverallJson","VolatilityMeasure")',
                 dataType: "json",
                 async: false
             }).responseText;
             var data = new google.visualization.arrayToDataTable([
-                 ['Task', 'Hours per Day'],
-                 ['total', 5],
+                 ['Task', 'Hours per Day'],               
                  ['passed',4],
-                 ['failed', 1]
-                ]);
-
-       
+                 ['failed', 1],
+                 ['aborted', 4],
+                 ['inconclusive', 4]
+                ]);         
 
             var options = {
                 title: 'Loyalty Web Team Daily Test Result'

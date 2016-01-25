@@ -20,22 +20,20 @@ namespace LoyaltyTestResultViewer.Controllers
         // GET: WebTestTeamHome
         public ActionResult Index()
         {
-            Dictionary<string, int> data = GetTestResultDetails();
-         //   object data = MyJson(data1);
+            Dictionary<string, int> data = GetOverallTestResultDetails();
             return View ( data);
         }
 
-        public object MyJson(Dictionary<string, int> dic)
+        public object OverallJson(Dictionary<string, int> dic)
         {
-            dic = GetTestResultDetails();
+            dic = GetOverallTestResultDetails();
             string json = JsonConvert.SerializeObject(dic, Formatting.Indented);
            
-            return JsonConvert.DeserializeObject<object>(json);
-
+            return JsonConvert.DeserializeObject<object>(json);  
         }
 
 
-        public Dictionary<string, int> GetTestResultDetails()
+        public Dictionary<string, int> GetOverallTestResultDetails()
         {
             Dictionary<string, int> Result = new Dictionary<string, int>();
             string testResultPath = @"C:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\TestData\sally2.trx";
@@ -62,6 +60,11 @@ namespace LoyaltyTestResultViewer.Controllers
                                  select item.Attribute("aborted").Value).FirstOrDefault();
             int _abortedNumber = int.Parse(abortedNumber);
             Result.Add("aborted", _abortedNumber);
+
+            var inconclusiveNumber = (from item in xdoc.Descendants(ns + "Counters")
+                                 select item.Attribute("inconclusive").Value).FirstOrDefault();
+            int _inconclusiveNumber = int.Parse(inconclusiveNumber);
+            Result.Add("incconluive", _inconclusiveNumber);
 
             var pendingNumber = (from item in xdoc.Descendants(ns + "Counters")
                                  select item.Attribute("pending").Value).FirstOrDefault();

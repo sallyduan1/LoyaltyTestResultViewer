@@ -2,7 +2,6 @@ c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\Loyalt
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\LoyaltyTestResultViewer.dll
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\LoyaltyTestResultViewer.pdb
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\Antlr3.Runtime.dll
-c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\EntityFramework.dll
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\EntityFramework.SqlServer.dll
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\Microsoft.AspNet.Identity.Core.dll
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\Microsoft.AspNet.Identity.EntityFramework.dll
@@ -51,4 +50,4 @@ c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\Micros
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\obj\Debug\LoyaltyTestResultViewer.dll
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\obj\Debug\LoyaltyTestResultViewer.pdb
-c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\obj\Debug\LoyaltyTestResultViewer.csprojResolveAssemblyReference.cache
+C:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\obj\Debug\LoyaltyTestResultViewer.csprojResolveAssemblyReference.cache
