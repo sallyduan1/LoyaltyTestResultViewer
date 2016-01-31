@@ -36,9 +36,9 @@ namespace LoyaltyTestResultViewer.Controllers
         public Dictionary<string, int> GetOverallTestResultDetails()
         {
             Dictionary<string, int> Result = new Dictionary<string, int>();
-            string testResultPath = @"C:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\TestData\sally2.trx";
+            string testResultPath = @"\TestData\sally2.trx";
             XNamespace xmlns = "http://microsoft.com/schemas/VisualStudio/TeamTest/2010";
-            XDocument xdoc = XDocument.Load(testResultPath);
+            XDocument xdoc = XDocument.Load(Server.MapPath(testResultPath));
             var ns = xdoc.Root.Name.Namespace;
 
             var totalNumber = (from item in xdoc.Descendants(ns + "Counters")

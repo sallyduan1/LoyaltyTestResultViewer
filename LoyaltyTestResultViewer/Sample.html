@@ -1,0 +1,170 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['orgchart']}]}"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <title> by lelehehe</title>
+</head>
+
+<body>
+    <div id="chart_div"></div>
+    <div id="chart_div2"></div>
+
+    <script type='text/javascript'>
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('number', 'Value');
+            data.addRows([
+                ['Germany', 700],
+                ['USA', 300],
+                ['Brazil', 400],
+                ['Canada', 500],
+                ['France', 600],
+                ['Russia', 800]
+            ]);
+
+            var data2 = new google.visualization.DataTable();
+            data2.addColumn('string', 'Country');
+            data2.addColumn('string', 'Year');
+            data2.addColumn('number', 'Value');
+
+            data2.addRows([
+                ['Germany', '2008', 37],
+                ['Germany', '2009', 45],
+                ['Germany', '2010', 72],
+                ['Germany', '2011', 67],
+                ['Germany', '2012', 62],
+                ['Germany', '2013', 81],
+                ['USA', '2008', 76],
+                ['USA', '2009', 32],
+                ['USA', '2010', 52],
+                ['USA', '2011', 77],
+                ['USA', '2012', 82],
+                ['USA', '2013', 51],
+                ['Brazil', '2008', 27],
+                ['Brazil', '2009', 55],
+                ['Brazil', '2010', 92],
+                ['Brazil', '2011', 27],
+                ['Brazil', '2012', 52],
+                ['Brazil', '2013', 61],
+                ['Canada', '2008', 67],
+                ['Canada', '2009', 25],
+                ['Canada', '2010', 32],
+                ['Canada', '2011', 97],
+                ['Canada', '2012', 52],
+                ['Canada', '2013', 11],
+                ['France', '2008', 27],
+                ['France', '2009', 35],
+                ['France', '2010', 52],
+                ['France', '2011', 87],
+                ['France', '2012', 82],
+                ['France', '2013', 61],
+                ['Russia', '2008', 17],
+                ['Russia', '2009', 95],
+                ['Russia', '2010', 32],
+                ['Russia', '2011', 77],
+                ['Russia', '2012', 92],
+                ['Russia', '2013', 91]
+            ]);
+
+            var chart = new google.visualization.ChartWrapper({
+                chartType: 'ColumnChart',
+                containerId: 'chart_div',
+                dataTable: data,
+                options: {
+                    // setting the "isStacked" option to true fixes the spacing problem
+                    isStacked: true,
+                    height: 300,
+                    width: 600
+                },
+                view: {
+                    // set the columns to use in the chart's view
+                    // calculated columns put data belonging to each country in the proper column
+                    columns: [0, {
+                        type: 'number',
+                        label: 'Germany',
+                        calc: function (dt, row) {
+                            return (dt.getValue(row, 0) == 'Germany') ? dt.getValue(row, 1) : null;
+                        }
+                    }, {
+                        type: 'number',
+                        label: 'USA',
+                        calc: function (dt, row) {
+                            return (dt.getValue(row, 0) == 'USA') ? dt.getValue(row, 1) : null;
+                        }
+                    }, {
+                        type: 'number',
+                        label: 'Brazil',
+                        calc: function (dt, row) {
+                            return (dt.getValue(row, 0) == 'Brazil') ? dt.getValue(row, 1) : null;
+                        }
+                    }, {
+                        type: 'number',
+                        label: 'Canada',
+                        calc: function (dt, row) {
+                            return (dt.getValue(row, 0) == 'Canada') ? dt.getValue(row, 1) : null;
+                        }
+                    }, {
+                        type: 'number',
+                        label: 'France',
+                        calc: function (dt, row) {
+                            return (dt.getValue(row, 0) == 'France') ? dt.getValue(row, 1) : null;
+                        }
+                    }, {
+                        type: 'number',
+                        label: 'Russia',
+                        calc: function (dt, row) {
+                            return (dt.getValue(row, 0) == 'Russia') ? dt.getValue(row, 1) : null;
+                        }
+                    }]
+                }
+            });
+
+            var chart2 = new google.visualization.ChartWrapper({
+                chartType: 'ColumnChart',
+                containerId: 'chart_div2',
+                dataTable: data2,
+                options: {
+                    height: 300,
+                    width: 600
+                },
+                view: {
+                    columns: [1, 2],
+                    // set default view to Germany
+                    rows: data2.getFilteredRows([{ column: 0, value: 'Germany' }])
+                }
+            });
+
+            google.visualization.events.addListener(chart, 'select', function () {
+                var sel = chart.getChart().getSelection();
+                var country = data.getValue(sel[0].row, 0);
+                var rows = data2.getFilteredRows([{ column: 0, value: country }]);
+                var view = chart2.getView();
+                view.rows = rows;
+                chart2.setView(view);
+                chart2.draw();
+            });
+
+            chart.draw();
+            chart2.draw();
+        }
+
+        $(function () {
+            console.log("ready!");
+
+            //google.load('visualization', '1', { 'packages': ['corechart', 'controls']});
+            //google.setOnLoadCallback(drawChart);
+            drawChart();
+        });
+
+    </script>
+
+</body>
+
+</html>

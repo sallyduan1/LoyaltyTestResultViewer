@@ -1,0 +1,135 @@
+﻿<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+
+
+    <style type="text/css">
+    </style>
+
+    <title>An Example of a Google Bar Chart by lelehehe</title>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+//<![CDATA[
+        var VanillaRunOnDomReady = function () {
+            google.charts.load('current', { packages: ['corechart', 'bar'] });
+            google.charts.setOnLoadCallback(drawBasic);
+
+            function drawBasic() {
+
+                var data = new google.visualization.DataTable();
+                data.addColumn('timeofday', 'Time of Day');
+                data.addColumn('number', 'Motivation Level');
+
+                data.addRows([
+                  [{ v: [8, 0, 0], f: '8 am' }, 1],
+                  [{ v: [9, 0, 0], f: '9 am' }, 2],
+                  [{ v: [10, 0, 0], f: '10 am' }, 3],
+                  [{ v: [11, 0, 0], f: '11 am' }, 4],
+                  [{ v: [12, 0, 0], f: '12 pm' }, 5],
+                  [{ v: [13, 0, 0], f: '1 pm' }, 6],
+                  [{ v: [14, 0, 0], f: '2 pm' }, 7],
+                  [{ v: [15, 0, 0], f: '3 pm' }, 8],
+                  [{ v: [16, 0, 0], f: '4 pm' }, 9],
+                  [{ v: [17, 0, 0], f: '5 pm' }, 10],
+                ]);
+
+                var options = {
+                    title: 'Motivation Level Throughout the Day',
+                    hAxis: {
+                        title: 'Time of Day',
+                        format: 'h:mm a',
+                        viewWindow: {
+                            min: [7, 30, 0],
+                            max: [17, 30, 0]
+                        }
+                    },
+                    vAxis: {
+                        title: 'Rating (scale of 1-10)'
+                    }
+                };
+
+                var chart = new google.visualization.ColumnChart(
+                  document.getElementById('chart_div'));
+
+                chart.draw(data, options);
+            }
+        }
+
+        var alreadyrunflag = 0;
+
+        if (document.addEventListener)
+            document.addEventListener("DOMContentLoaded", function () {
+                alreadyrunflag = 1;
+                VanillaRunOnDomReady();
+            }, false);
+        else if (document.all && !window.opera) {
+            document.write('<script type="text/javascript" id="contentloadtag" defer="defer" src="javascript:void(0)"><\/script>');
+            var contentloadtag = document.getElementById("contentloadtag")
+            contentloadtag.onreadystatechange = function () {
+                if (this.readyState == "complete") {
+                    alreadyrunflag = 1;
+                    VanillaRunOnDomReady();
+                }
+            }
+        }
+
+        window.onload = function () {
+            setTimeout("if (!alreadyrunflag){VanillaRunOnDomReady}", 0);
+        }//]]>
+
+    </script>
+
+
+    <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/current/css/util/util.css">
+    <link rel="stylesheet" type="text/css" href="chrome-extension://neomigpibafpboiknmijddgnncengfnm/css/divpop.css">
+    <link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/current/css/core/tooltip.css">
+</head>
+
+<body>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div id="chart_div"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 539px; height: 200px;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" aria-label="A chart."><svg width="539" height="200" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_0"><rect x="76" y="38" width="388" height="124"></rect></clipPath></defs><rect x="0" y="0" width="539" height="200" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="76" y="22.85" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Motivation Level Throughout the Day</text></g><g><rect x="475" y="38" width="53" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="475" y="38" width="53" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="501" y="47.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Mo…</text><rect x="501" y="38" width="27" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><rect x="475" y="38" width="22" height="11" stroke="none" stroke-width="0" fill="#3366cc"></rect></g></g><g><rect x="76" y="38" width="388" height="124" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(https://fiddle.jshell.net/lelehehe/8r4c5k9r/show/light/#_ABSTRACT_RENDERER_ID_0)"><g><rect x="95" y="38" width="1" height="124" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="173" y="38" width="1" height="124" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="250" y="38" width="1" height="124" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="328" y="38" width="1" height="124" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="405" y="38" width="1" height="124" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="76" y="161" width="388" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="76" y="130" width="388" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="76" y="100" width="388" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="76" y="69" width="388" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="76" y="38" width="388" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="84" y="150" width="23" height="11" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="123" y="137" width="23" height="24" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="161" y="125" width="23" height="36" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="200" y="113" width="23" height="48" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="239" y="101" width="23" height="60" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="277" y="88" width="23" height="73" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="316" y="76" width="23" height="85" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="355" y="64" width="23" height="97" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="393" y="51" width="23" height="110" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="432" y="39" width="23" height="122" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="76" y="161" width="388" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="95.85" y="176.68333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">8:00 AM</text></g><g><text text-anchor="middle" x="173.25" y="176.68333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">10:00 AM</text></g><g><text text-anchor="middle" x="250.65" y="176.68333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">12:00 PM</text></g><g><text text-anchor="middle" x="328.05" y="176.68333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">2:00 PM</text></g><g><text text-anchor="middle" x="405.45" y="176.68333333333334" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">4:00 PM</text></g><g><text text-anchor="end" x="65" y="165.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">0.0</text></g><g><text text-anchor="end" x="65" y="134.6" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">2.5</text></g><g><text text-anchor="end" x="65" y="103.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">5.0</text></g><g><text text-anchor="end" x="65" y="73.1" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">7.5</text></g><g><text text-anchor="end" x="65" y="42.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">10.0</text></g></g></g><g><g><text text-anchor="middle" x="270" y="193.01666666666668" font-family="Arial" font-size="11" font-style="italic" stroke="none" stroke-width="0" fill="#222222">Time of Day</text></g><g><text text-anchor="middle" x="25.85" y="100" font-family="Arial" font-size="11" font-style="italic" transform="rotate(-90 25.85 100)" stroke="none" stroke-width="0" fill="#222222">Rating (scale of 1-10)</text></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>Time of Day</th><th>Motivation Level</th></tr></thead><tbody><tr><td>8 am</td><td>1</td></tr><tr><td>9 am</td><td>2</td></tr><tr><td>10 am</td><td>3</td></tr><tr><td>11 am</td><td>4</td></tr><tr><td>12 pm</td><td>5</td></tr><tr><td>1 pm</td><td>6</td></tr><tr><td>2 pm</td><td>7</td></tr><tr><td>3 pm</td><td>8</td></tr><tr><td>4 pm</td><td>9</td></tr><tr><td>5 pm</td><td>10</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 210px; left: 549px; white-space: nowrap; font-family: Arial; font-size: 11px;">Mot…</div><div></div></div></div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/current/js/jsapi_compiled_format_module.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/current/js/jsapi_compiled_default_module.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/current/js/jsapi_compiled_ui_module.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/current/js/jsapi_compiled_corechart_module.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/current/third_party/dygraphs/dygraph-tickers-combined.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/current/third_party/webfontloader/webfont.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/current/js/jsapi_compiled_bar_module.js"></script><div style="position: absolute; display: none;"><div style="padding: 1px; border: 1px solid infotext; font-size: 11px; margin: 11px; font-family: Arial; background: infobackground;">Motivation Level</div></div>
+
+
+
+
+
+
+</body>
+</html>
