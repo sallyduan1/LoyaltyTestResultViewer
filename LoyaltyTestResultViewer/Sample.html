@@ -14,6 +14,8 @@
 <body>
     <div id="chart_div"></div>
     <div id="chart_div2"></div>
+    <div id="chart_div3"></div>
+
 
     <script type='text/javascript'>
         function drawChart() {
@@ -21,56 +23,26 @@
             data.addColumn('string', 'Name');
             data.addColumn('number', 'Value');
             data.addRows([
-                ['Germany', 700],
-                ['USA', 300],
-                ['Brazil', 400],
-                ['Canada', 500],
-                ['France', 600],
-                ['Russia', 800]
+                ['Date1', 700],
+                ['Date2', 300],
+                ['Date3', 400]
             ]);
 
             var data2 = new google.visualization.DataTable();
-            data2.addColumn('string', 'Country');
+            data2.addColumn('string', 'Date');
             data2.addColumn('string', 'Year');
             data2.addColumn('number', 'Value');
+            data2.addColumn({ type: 'string', role: 'tooltip' });
 
             data2.addRows([
-                ['Germany', '2008', 37],
-                ['Germany', '2009', 45],
-                ['Germany', '2010', 72],
-                ['Germany', '2011', 67],
-                ['Germany', '2012', 62],
-                ['Germany', '2013', 81],
-                ['USA', '2008', 76],
-                ['USA', '2009', 32],
-                ['USA', '2010', 52],
-                ['USA', '2011', 77],
-                ['USA', '2012', 82],
-                ['USA', '2013', 51],
-                ['Brazil', '2008', 27],
-                ['Brazil', '2009', 55],
-                ['Brazil', '2010', 92],
-                ['Brazil', '2011', 27],
-                ['Brazil', '2012', 52],
-                ['Brazil', '2013', 61],
-                ['Canada', '2008', 67],
-                ['Canada', '2009', 25],
-                ['Canada', '2010', 32],
-                ['Canada', '2011', 97],
-                ['Canada', '2012', 52],
-                ['Canada', '2013', 11],
-                ['France', '2008', 27],
-                ['France', '2009', 35],
-                ['France', '2010', 52],
-                ['France', '2011', 87],
-                ['France', '2012', 82],
-                ['France', '2013', 61],
-                ['Russia', '2008', 17],
-                ['Russia', '2009', 95],
-                ['Russia', '2010', 32],
-                ['Russia', '2011', 77],
-                ['Russia', '2012', 92],
-                ['Russia', '2013', 91]
+                ['Date1', 'test case 1', 1, "this is the first detail"],
+                ['Date1', 'test case 2', 1, "detail 2"],
+                ['Date2', 'test case 3', 1, "detail 3"],
+                ['Date2', 'test case 4', 1, "detail 4"],
+                ['Date2', 'test case 5', 1, "detail 5"],
+                ['Date3', 'test case 6', 1, "detail 6"],
+                ['Date3', 'test case 7', 1, "detail 7"],
+                ['Date3', 'test case 8', 1, "detail 8"]
             ]);
 
             var chart = new google.visualization.ChartWrapper({
@@ -79,49 +51,34 @@
                 dataTable: data,
                 options: {
                     // setting the "isStacked" option to true fixes the spacing problem
-                    isStacked: true,
+                    //isStacked: true,
+                    tooltip: { isHtml: true },
+                    legend: 'none',
                     height: 300,
                     width: 600
                 },
                 view: {
                     // set the columns to use in the chart's view
-                    // calculated columns put data belonging to each country in the proper column
+                    // calculated columns put data belonging to each date in the proper column
                     columns: [0, {
                         type: 'number',
-                        label: 'Germany',
+                        label: 'Date1',
                         calc: function (dt, row) {
-                            return (dt.getValue(row, 0) == 'Germany') ? dt.getValue(row, 1) : null;
+                            return (dt.getValue(row, 0) == 'Date1') ? dt.getValue(row, 1) : null;
                         }
                     }, {
                         type: 'number',
-                        label: 'USA',
+                        label: 'Date2',
                         calc: function (dt, row) {
-                            return (dt.getValue(row, 0) == 'USA') ? dt.getValue(row, 1) : null;
+                            return (dt.getValue(row, 0) == 'Date2') ? dt.getValue(row, 1) : null;
                         }
                     }, {
                         type: 'number',
-                        label: 'Brazil',
+                        label: 'Date3',
                         calc: function (dt, row) {
-                            return (dt.getValue(row, 0) == 'Brazil') ? dt.getValue(row, 1) : null;
+                            return (dt.getValue(row, 0) == 'Date3') ? dt.getValue(row, 1) : null;
                         }
-                    }, {
-                        type: 'number',
-                        label: 'Canada',
-                        calc: function (dt, row) {
-                            return (dt.getValue(row, 0) == 'Canada') ? dt.getValue(row, 1) : null;
-                        }
-                    }, {
-                        type: 'number',
-                        label: 'France',
-                        calc: function (dt, row) {
-                            return (dt.getValue(row, 0) == 'France') ? dt.getValue(row, 1) : null;
-                        }
-                    }, {
-                        type: 'number',
-                        label: 'Russia',
-                        calc: function (dt, row) {
-                            return (dt.getValue(row, 0) == 'Russia') ? dt.getValue(row, 1) : null;
-                        }
+
                     }]
                 }
             });
@@ -135,24 +92,53 @@
                     width: 600
                 },
                 view: {
-                    columns: [1, 2],
-                    // set default view to Germany
-                    rows: data2.getFilteredRows([{ column: 0, value: 'Germany' }])
+                    columns: [1, 2, 3],
+                    // set default view to Date1
+                    rows: data2.getFilteredRows([{ column: 0, value: 'Date1' }])
                 }
             });
 
+            var chart3 = new google.visualization.ChartWrapper({
+                chartType: 'PieChart',
+                containerId: 'chart_div3',
+                dataTable: data2,
+                options: {
+                    title: 'My Daily Activities',
+                    legend: 'none',
+                    pieSliceText: 'label',
+                    tooltip: { isHtml: true },
+                    height: 300,
+                    width: 600
+                },
+                view: {
+                    columns: [1, 2, 3],
+                    // set default view to Date1
+                    rows: data2.getFilteredRows([{ column: 0, value: 'Date1' }])
+                }
+
+            });
+
+
             google.visualization.events.addListener(chart, 'select', function () {
                 var sel = chart.getChart().getSelection();
-                var country = data.getValue(sel[0].row, 0);
-                var rows = data2.getFilteredRows([{ column: 0, value: country }]);
-                var view = chart2.getView();
-                view.rows = rows;
-                chart2.setView(view);
+                var date = data.getValue(sel[0].row, 0);
+                var rows2 = data2.getFilteredRows([{ column: 0, value: date }]);
+                var view2 = chart2.getView();
+                view2.rows = rows2;
+                chart2.setView(view2);
                 chart2.draw();
+
+                var rows3 = data2.getFilteredRows([{ column: 0, value: date }]);
+                var view3 = chart3.getView();
+                view3.rows = rows3;
+                chart3.setView(view3);
+                //chart3.options.title = 'we are viewing date ' + date;
+                chart3.draw();
             });
 
             chart.draw();
             chart2.draw();
+            chart3.draw();
         }
 
         $(function () {
