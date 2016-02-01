@@ -13,143 +13,150 @@
 
 <body>
     <div id="chart_div"></div>
-    <div id="chart_div2"></div>
+    <!--<div id="chart_div2"></div>-->
     <div id="chart_div3"></div>
 
 
-    <script type='text/javascript'>
-        function drawChart() {
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Name');
-            data.addColumn('number', 'Value');
-            data.addRows([
-                ['Date1', 700],
-                ['Date2', 300],
-                ['Date3', 400]
-            ]);
+<script type='text/javascript'>
+    var rawData1 = [
+        ['Date1', 700],
+        ['Date2', 300],
+        ['Date3', 400]
+    ];
 
-            var data2 = new google.visualization.DataTable();
-            data2.addColumn('string', 'Date');
-            data2.addColumn('string', 'Year');
-            data2.addColumn('number', 'Value');
-            data2.addColumn({ type: 'string', role: 'tooltip' });
-
-            data2.addRows([
-                ['Date1', 'test case 1', 1, "this is the first detail"],
-                ['Date1', 'test case 2', 1, "detail 2"],
-                ['Date2', 'test case 3', 1, "detail 3"],
-                ['Date2', 'test case 4', 1, "detail 4"],
-                ['Date2', 'test case 5', 1, "detail 5"],
-                ['Date3', 'test case 6', 1, "detail 6"],
-                ['Date3', 'test case 7', 1, "detail 7"],
-                ['Date3', 'test case 8', 1, "detail 8"]
-            ]);
-
-            var chart = new google.visualization.ChartWrapper({
-                chartType: 'ColumnChart',
-                containerId: 'chart_div',
-                dataTable: data,
-                options: {
-                    // setting the "isStacked" option to true fixes the spacing problem
-                    //isStacked: true,
-                    tooltip: { isHtml: true },
-                    legend: 'none',
-                    height: 300,
-                    width: 600
-                },
-                view: {
-                    // set the columns to use in the chart's view
-                    // calculated columns put data belonging to each date in the proper column
-                    columns: [0, {
-                        type: 'number',
-                        label: 'Date1',
-                        calc: function (dt, row) {
-                            return (dt.getValue(row, 0) == 'Date1') ? dt.getValue(row, 1) : null;
-                        }
-                    }, {
-                        type: 'number',
-                        label: 'Date2',
-                        calc: function (dt, row) {
-                            return (dt.getValue(row, 0) == 'Date2') ? dt.getValue(row, 1) : null;
-                        }
-                    }, {
-                        type: 'number',
-                        label: 'Date3',
-                        calc: function (dt, row) {
-                            return (dt.getValue(row, 0) == 'Date3') ? dt.getValue(row, 1) : null;
-                        }
-
-                    }]
-                }
-            });
-
-            var chart2 = new google.visualization.ChartWrapper({
-                chartType: 'ColumnChart',
-                containerId: 'chart_div2',
-                dataTable: data2,
-                options: {
-                    height: 300,
-                    width: 600
-                },
-                view: {
-                    columns: [1, 2, 3],
-                    // set default view to Date1
-                    rows: data2.getFilteredRows([{ column: 0, value: 'Date1' }])
-                }
-            });
-
-            var chart3 = new google.visualization.ChartWrapper({
-                chartType: 'PieChart',
-                containerId: 'chart_div3',
-                dataTable: data2,
-                options: {
-                    title: 'My Daily Activities',
-                    legend: 'none',
-                    pieSliceText: 'label',
-                    tooltip: { isHtml: true },
-                    height: 300,
-                    width: 600
-                },
-                view: {
-                    columns: [1, 2, 3],
-                    // set default view to Date1
-                    rows: data2.getFilteredRows([{ column: 0, value: 'Date1' }])
-                }
-
-            });
+    var rawData2 = [
+        ['Date1', 'test case 1', 1, "detail 1", 'error'],
+        ['Date1', 'test case 2', 1, "detail 2", 'Inclusive'],
+        ['Date2', 'test case 3', 1, "detail 3", 'Inclusive'],
+        ['Date2', 'test case 4', 1, "detail 4", 'timeout'],
+        ['Date2', 'test case 5', 1, "detail 5", 'timeout'],
+        ['Date3', 'test case 6', 1, "detail 6", 'notFound'],
+        ['Date3', 'test case 7', 1, "detail 7", 'success'],
+        ['Date3', 'test case 8', 1, "detail 8", 'success']
+    ];
 
 
-            google.visualization.events.addListener(chart, 'select', function () {
-                var sel = chart.getChart().getSelection();
-                var date = data.getValue(sel[0].row, 0);
-                var rows2 = data2.getFilteredRows([{ column: 0, value: date }]);
-                var view2 = chart2.getView();
-                view2.rows = rows2;
-                chart2.setView(view2);
-                chart2.draw();
+    function drawChart() {
+        var data = new google.visualization.DataTable();
+        var firstSelected = 'Date1';
+        data.addColumn('string', 'Name');
+        data.addColumn('number', 'Value');
+        data.addRows(rawData1);
 
-                var rows3 = data2.getFilteredRows([{ column: 0, value: date }]);
-                var view3 = chart3.getView();
-                view3.rows = rows3;
-                chart3.setView(view3);
-                //chart3.options.title = 'we are viewing date ' + date;
-                chart3.draw();
-            });
+        var data2 = new google.visualization.DataTable();
+        data2.addColumn('string', 'Date');
+        data2.addColumn('string', 'TestName');
+        data2.addColumn('number', 'Value');
+        data2.addColumn({ type: 'string', role: 'tooltip' });
+        data2.addColumn('string', 'ResultType');
 
-            chart.draw();
-            chart2.draw();
-            chart3.draw();
-        }
+        data2.addRows(rawData2);
 
-        $(function () {
-            console.log("ready!");
-
-            //google.load('visualization', '1', { 'packages': ['corechart', 'controls']});
-            //google.setOnLoadCallback(drawChart);
-            drawChart();
+        var chart = new google.visualization.ChartWrapper({
+            chartType: 'ColumnChart',
+            containerId: 'chart_div',
+            dataTable: data,
+            options: {
+                // setting the "isStacked" option to true fixes the spacing problem
+                //isStacked: true,
+                tooltip: { isHtml: true },
+                legend: 'none',
+                height: 300,
+                width: 600
+            }
+            //,
+            //view: {
+            //    // set the columns to use in the chart's view
+            //    // calculated columns put data belonging to each date in the proper column
+            //    columns: [0, {
+            //        type: 'number',
+            //        label: 'Date1',
+            //        calc: function (dt, row) {
+            //            return (dt.getValue(row, 0) == 'Date1') ? dt.getValue(row, 1) : null;
+            //        }
+            //    }, {
+            //        type: 'number',
+            //        label: 'Date2',
+            //        calc: function (dt, row) {
+            //            return (dt.getValue(row, 0) == 'Date2') ? dt.getValue(row, 1) : null;
+            //        }
+            //    }, {
+            //        type: 'number',
+            //        label: 'asdfasdf',
+            //        calc: function (dt, row) {
+            //            return (dt.getValue(row, 0) == 'Date3') ? dt.getValue(row, 1) : null;
+            //        }
+            //    }]
+            //}
         });
 
-    </script>
+        //var chart2 = new google.visualization.ChartWrapper({
+        //    chartType: 'ColumnChart',
+        //    containerId: 'chart_div2',
+        //    dataTable: data2,
+        //    options: {
+        //        height: 300,
+        //        width: 600
+        //    },
+        //    view: {
+        //        columns: [1, 2, 3],
+        //        // set default view to Date1
+        //        rows: data2.getFilteredRows([{ column: 0, value: firstSelected }])
+        //    }
+        //});
+
+        var chart3 = new google.visualization.ChartWrapper({
+            chartType: 'PieChart',
+            containerId: 'chart_div3',
+            dataTable: data2,
+            options: {
+                title: 'current time: ' + firstSelected,
+                legend: 'ResultType',
+                pieSliceText: 'label',
+                tooltip: { isHtml: true },
+                height: 300,
+                width: 600
+            },
+            view: {
+                columns: [1, 2, 3, 4],
+                // set default view to Date1
+                rows: data2.getFilteredRows([{ column: 0, value: firstSelected }])
+            }
+
+        });
+
+
+        google.visualization.events.addListener(chart, 'select', function () {
+            var sel = chart.getChart().getSelection();
+            var date = data.getValue(sel[0].row, 0);
+            //var rows2 = data2.getFilteredRows([{ column: 0, value: date }]);
+            //var view2 = chart2.getView();
+            //view2.rows = rows2;
+            //chart2.setView(view2);
+            //chart2.draw();
+
+            var rows3 = data2.getFilteredRows([{ column: 0, value: date }]);
+            var view3 = chart3.getView();
+            view3.rows = rows3;
+            chart3.setView(view3);
+            chart3.setOption('title', 'current time: ' + date);
+            chart3.draw();
+        });
+
+        chart.draw();
+        //chart2.draw();
+        chart3.draw();
+    }
+
+    $(function () {
+        console.log("ready!");
+
+        //google.load('visualization', '1', { 'packages': ['corechart', 'controls']});
+        //google.setOnLoadCallback(drawChart);
+        drawChart();
+    });
+
+</script>
 
 </body>
 
