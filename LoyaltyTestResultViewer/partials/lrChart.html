@@ -1,7 +1,3 @@
-<h1>{{chartObject.type}}</h1>
 
-<div>
-    Onions: <input type="number" ng-model="onions[1].v" />
-</div>
-
-<div google-chart chart="chartObject" style="height:600px; width:100%;"></div>
+<div google-chart chart="vm.chartObject" style="height:600px; width:100%;" agc-on-select="vm.selectHandler(selectedItem)"></div>
+<div google-chart chart="vm.tableObject" style="height:600px; width:100%;" ></div>

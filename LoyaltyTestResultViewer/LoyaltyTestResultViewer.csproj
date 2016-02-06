@@ -258,6 +258,8 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="partials\lrChart.html" />
+    <Content Include="partials\lrChartController.js" />
     <Content Include="ProgressList.txt" />
     <Content Include="Scripts\loyaltyTestApp.js" />
     <Content Include="Scripts\ng-google-chart.js" />
@@ -320,9 +322,7 @@
     <Content Include="TestData\sally2.trx" />
     <Content Include="Views\VolatilityMeasure\_partialView.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="partials\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

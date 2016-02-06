@@ -3,7 +3,8 @@
         $routeProvider.
             when('/report/', {
                 templateUrl: 'partials/lrChart.html',
-                controller: 'lrChartController'
+                controller: 'lrChartController',
+                controllerAs: 'vm'
             }).
             otherwise({
                 redirectTo: '/generic'
