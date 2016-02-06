@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -258,6 +259,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="HtmlPage1.html" />
     <Content Include="ProgressList.txt" />
+    <Content Include="Scripts\loyaltyTestApp.js" />
+    <Content Include="Scripts\ng-google-chart.js" />
+    <Content Include="TestReport.html" />
     <Content Include="Sample.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -316,7 +320,9 @@
     <Content Include="TestData\sally2.trx" />
     <Content Include="Views\VolatilityMeasure\_partialView.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="partials\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
