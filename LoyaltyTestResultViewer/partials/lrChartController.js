@@ -1,15 +1,18 @@
 /* global angular */
 angular.module("loyalty-report-app").controller("lrChartController", function () {
     var vm = this;
+    vm.showTable = false;
 
     vm.chartObject = {};
+    vm.tableTitle = '';
     vm.chartObject.data = {
         "cols": [
             { id: "week", label: "week", type: "string" },
             { id: "error", label: "error", type: "number" },
             { id: "success", label: "success", type: "number" },
             { id: "timeout", label: "timeout", type: "number" },
-            { id: "inConclusive", label: "inConclusive", type: "number" }
+            { id: "inConclusive", label: "inConclusive", type: "number" },
+
         ],
         "rows": [
             {
@@ -43,10 +46,84 @@ angular.module("loyalty-report-app").controller("lrChartController", function ()
             {
                 c: [
                    { v: "week4" },
-                   { v: 20 },
-                   { v: 22 },
-                   { v: 25 },
-                   { v: 26 },
+                    {
+                        v: 20,
+                        detail: [
+                            {
+                                c: [
+                                    { v: "test1" },
+                                    { v: "Jan 11, 2016" },
+                                    { v: "test1 detail is here" }
+                                ]
+                            },
+                            {
+                                c: [
+                                    { v: "test2" },
+                                    { v: "Feb 12, 2015" },
+                                    { v: "test2 detail is here" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        v: 22,
+                        detail: [
+                            {
+                                c: [
+                                    { v: "test3" },
+                                    { v: "Jan 3, 2016" },
+                                    { v: "test3 detail is here" }
+                                ]
+                            },
+                            {
+                                c: [
+                                    { v: "test4" },
+                                    { v: "Feb 4, 2015" },
+                                    { v: "test4 detail is here" }
+                                ]
+                            }
+                        ]
+
+                    },
+                    {
+                        v: 25,
+                        detail: [
+                            {
+                                c: [
+                                    { v: "test5" },
+                                    { v: "Jan 5, 2016" },
+                                    { v: "test5 detail is here" }
+                                ]
+                            },
+                            {
+                                c: [
+                                    { v: "test6" },
+                                    { v: "Feb 6, 2015" },
+                                    { v: "test6 detail is here" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        v: 26 ,
+                        detail: [
+                            {
+                                c: [
+                                    { v: "test7" },
+                                    { v: "Jan 7, 2016" },
+                                    { v: "test7 detail is here" }
+                                ]
+                            },
+                            {
+                                c: [
+                                    { v: "test8" },
+                                    { v: "Feb 8, 2015" },
+                                    { v: "test8 detail is here" }
+                                ]
+                            }
+    ]
+                        
+                    },
 
                 ]
             }
@@ -63,8 +140,10 @@ angular.module("loyalty-report-app").controller("lrChartController", function ()
         }
     };
     vm.selectHandler = function (selectedItem) {
-        console.log(vm.chartObject.type);
-
+        vm.showTable = true;
+        var detail = vm.chartObject.data.rows[selectedItem.row].c[selectedItem.column].detail;
+        vm.tableObject.data.rows = detail;
+        vm.tableTitle = vm.chartObject.data.rows[selectedItem.row].c[0].v + ' ' + vm.chartObject.data.cols[selectedItem.column].label;
     }
 
 
@@ -80,7 +159,7 @@ angular.module("loyalty-report-app").controller("lrChartController", function ()
                 c: [
                     { v: "test1" },
                     { v: "Jan 11, 2016" },
-                    { v: "test1 detail is here"}
+                    { v: "test1 detail is here" }
                 ]
             },
             {
@@ -93,5 +172,11 @@ angular.module("loyalty-report-app").controller("lrChartController", function ()
         ]
     };
     vm.tableObject.type = 'Table';
+    vm.tableObject.options = {
+        'title': 'this is my table',
+        showRowNumber: true,
+        width: '100%',
+        height: '100%'
+    };
 });
 
