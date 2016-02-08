@@ -1,5 +1,5 @@
 /* global angular */
-angular.module("loyalty-report-app").controller("lrChartController", function () {
+angular.module("loyalty-report-app").controller("lrChartController", function ($http) {
     var vm = this;
     vm.showTable = false;
 
@@ -105,7 +105,7 @@ angular.module("loyalty-report-app").controller("lrChartController", function ()
                         ]
                     },
                     {
-                        v: 26 ,
+                        v: 26,
                         detail: [
                             {
                                 c: [
@@ -121,8 +121,8 @@ angular.module("loyalty-report-app").controller("lrChartController", function ()
                                     { v: "test8 detail is here" }
                                 ]
                             }
-    ]
-                        
+                        ]
+
                     },
 
                 ]
@@ -178,5 +178,21 @@ angular.module("loyalty-report-app").controller("lrChartController", function ()
         width: '100%',
         height: '100%'
     };
+
+    var activate = function () {
+        $http({
+            method: 'GET',
+            url: '/api/report/6'
+
+        }).then(function success(response) {
+            console.log(response);
+
+        }, function error(response) {
+            console.log(response);
+
+        });
+    }
+
+    activate();
 });
 

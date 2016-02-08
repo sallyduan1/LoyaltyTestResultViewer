@@ -7,7 +7,7 @@
                 controllerAs: 'vm'
             }).
             otherwise({
-                redirectTo: '/generic'
+                redirectTo: '/report'
             });
     }]).value('googleChartApiConfig', {
         version: '1',
