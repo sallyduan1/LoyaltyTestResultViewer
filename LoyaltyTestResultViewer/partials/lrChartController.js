@@ -6,15 +6,17 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
     vm.chartObject = {};
     vm.tableTitle = '';
     vm.chartObject.data = {
-        "cols": [
-            { id: "week", label: "week", type: "string" },
-            { id: "error", label: "error", type: "number" },
-            { id: "success", label: "success", type: "number" },
-            { id: "timeout", label: "timeout", type: "number" },
-            { id: "inConclusive", label: "inConclusive", type: "number" },
+        cols: [
+            { id: "Date", label: "Date", type: "string" },
+            { id: "Passed", label: "Passed", type: "number" },
+            { id: "Failed", label: "Failed", type: "number" },
+            { id: "Inconclusive", label: "Inconclusive", type: "number" },
+            { id: "NotExecuted", label: "NotExecuted", type: "number" },
+            { id: "Pending", label: "Pending", type: "number" },
+            { id: "Aborted", label: "Aborted", type: "number" },
 
         ],
-        "rows": [
+        rows: [
             {
                 c: [
                    { v: "week1" },
@@ -131,10 +133,10 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
     };
     vm.chartObject.type = 'ColumnChart';
     vm.chartObject.options = {
-        'title': 'How Much Pizza I Ate Last Night',
+        'title': 'ECommerce Loyalty Test Report',
         series: {
-            0: { color: 'red' },
-            1: { color: 'green' },
+            0: { color: 'green' },
+            1: { color: 'red' },
             2: { color: 'brown' },
             3: { color: 'blue' },
         }
@@ -185,8 +187,25 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
             url: '/api/report/6'
 
         }).then(function success(response) {
-            console.log(response);
+            console.log(response.data);
+            var rows = [];
 
+            _.forEach(response.data, function (testResult) {
+                var row = {
+                    c: [
+                        { v: testResult.Date + "(" + testResult.Total + ")" },
+                        { v: testResult.Passed },
+                        { v: testResult.Failed },
+                        { v: testResult.Inconclusive },
+                        { v: testResult.NotExecuted },
+                        { v: testResult.Pending },
+                        { v: testResult.Aborted }
+                    ]
+                };
+                rows.push(row);
+            });
+
+            vm.chartObject.data.rows = rows;
         }, function error(response) {
             console.log(response);
 

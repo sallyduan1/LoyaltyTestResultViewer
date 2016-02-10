@@ -9,6 +9,7 @@ using System.Web.Http;
 using System.Xml.Linq;
 using LoyaltyTestResultViewer.Models;
 using Microsoft.Ajax.Utilities;
+using WebGrease.Css.Extensions;
 
 namespace LoyaltyTestResultViewer.Controllers
 {
@@ -41,27 +42,50 @@ namespace LoyaltyTestResultViewer.Controllers
 
             testDataPath = testDataPath.IsNullOrWhiteSpace() ? System.Web.Hosting.HostingEnvironment.MapPath(@"\TestData") : testDataPath;
             var files = Directory.GetFiles(testDataPath);
-            var filesSorted = (from file in files orderby file descending select file).Take(lastDays);
+
+            Dictionary<string, string> dateBasedFiles = new Dictionary<string, string>();
+            files.ForEach(file =>
+            {
+                var parts = file.Split();
+                var date = parts[parts.Length - 2];
+                if (!dateBasedFiles.ContainsKey(date))
+                {
+                    dateBasedFiles[date] = file;
+                }
+                else if (String.CompareOrdinal(dateBasedFiles[date], file) < 0)
+                {
+                    dateBasedFiles[date] = file;
+                }
+            });
+
+            var filesSorted = (from pair in dateBasedFiles
+                       orderby pair.Value ascending
+                       select pair).Take(lastDays);
+
+            //var filesSorted = (from file in files orderby file descending select file).Take(lastDays);
             var testRsults = filesSorted.Select(RetriveData).ToList();
 
             return testRsults;
         }
 
-        private static TestResult RetriveData(string file)
+        private static TestResult RetriveData(KeyValuePair<string, string> pair)
         {
             XNamespace xmlns = "http://microsoft.com/schemas/VisualStudio/TeamTest/2010";
-            XDocument xdoc = XDocument.Load(file);
+            XDocument xdoc = XDocument.Load(pair.Value);
             var ns = xdoc.Root.Name.Namespace;
 
             var countersElement = (from item in xdoc.Descendants(ns + "Counters")
                                    select item).FirstOrDefault();
             var testResult = new TestResult()
             {
+                Date = pair.Key,
+
                 Passed = Int32.Parse(countersElement.Attribute("passed").Value),
                 Failed = Int32.Parse(countersElement.Attribute("failed").Value),
                 Aborted = Int32.Parse(countersElement.Attribute("aborted").Value),
                 Inconclusive = Int32.Parse(countersElement.Attribute("inconclusive").Value),
                 Pending = Int32.Parse(countersElement.Attribute("pending").Value),
+                NotExecuted = Int32.Parse(countersElement.Attribute("notExecuted").Value),
                 Total = Int32.Parse(countersElement.Attribute("total").Value),
             };
             return testResult;

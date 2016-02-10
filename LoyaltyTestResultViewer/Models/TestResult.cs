@@ -10,7 +10,7 @@ namespace LoyaltyTestResultViewer.Models
     /// </summary>
     public class TestResult
     {
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
         public IEnumerable<TestCase> TestCases { get; set; }
 
         public int Passed { get; set; }
@@ -19,6 +19,8 @@ namespace LoyaltyTestResultViewer.Models
         public int Inconclusive { get; set; }
         public int Pending { get; set; }
         public int Total { get; set; }
+        public int NotExecuted { get; set; }
+        
 
     }
 }
