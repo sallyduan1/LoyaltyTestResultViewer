@@ -16,6 +16,10 @@ namespace LoyaltyTestResultViewer
                 routeTemplate: "api/{controller}/{lastDays}",
                 defaults: new { lastDays = RouteParameter.Optional }
             );
+            config.Routes.MapHttpRoute(
+                name: "getTestCases",
+                routeTemplate: "api/{controller}/{fileName}/{column}"
+            );
         }
     }
 }

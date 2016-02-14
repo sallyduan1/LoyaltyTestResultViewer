@@ -12,6 +12,6 @@
         public TestStatusType TestStatus { get; set; }
         public string TestName { get; set; }
         public string ComputerName { get; set; }
-        public string Detail { get; set; }
+        public string Message { get; set; }
     }
 }

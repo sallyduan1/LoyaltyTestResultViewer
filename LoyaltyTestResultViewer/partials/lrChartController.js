@@ -142,19 +142,51 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
         }
     };
     vm.selectHandler = function (selectedItem) {
-        vm.showTable = true;
-        var detail = vm.chartObject.data.rows[selectedItem.row].c[selectedItem.column].detail;
-        vm.tableObject.data.rows = detail;
-        vm.tableTitle = vm.chartObject.data.rows[selectedItem.row].c[0].v + ' ' + vm.chartObject.data.cols[selectedItem.column].label;
+        if (!selectedItem) return;
+
+        //todo: 
+        // vm.chartObject.data.rows[selectedItem.row].fileName
+        //"C:\Users\Mike Zhang\Source\Repos\LoyaltyTestResultViewer\LoyaltyTestResultViewer\TestData\X3G9_MW00977477 2015-12-26 17_16_50.trx"
+        //selectedItem.column
+        var filePath = encodeURI(vm.chartObject.data.rows[selectedItem.row].filePath);
+        $http({
+            method: 'GET',
+            url: '/api/report/' + filePath + '/' + selectedItem.column
+        }).then(function success(response) {
+            vm.showTable = true;
+            console.log(response.data);
+            var rows = [];
+
+            _.forEach(response.data, function (testCase) {
+                var row = {
+                    c: [
+                        { v: testCase.TestName },
+                        { v: testCase.ComputerName },
+                        { v: testCase.Message }
+                    ],
+                };
+                rows.push(row);
+            });
+
+            vm.tableTitle = vm.chartObject.data.rows[selectedItem.row].c[0].v + ' ' + vm.chartObject.data.cols[selectedItem.column].label;
+            vm.tableObject.data.rows = rows;
+        }, function error(response) {
+            console.log(response);
+            vm.showTable = false;
+
+        });
+
+        //var detail = vm.chartObject.data.rows[selectedItem.row].c[selectedItem.column].detail;
+        //vm.tableObject.data.rows = detail;
     }
 
 
     vm.tableObject = {};
     vm.tableObject.data = {
         "cols": [
-            { id: "testName", label: "testName", type: "string" },
-            { id: "time", label: "time", type: "string" },
-            { id: "detail", label: "detail", type: "string" }
+            { id: "testName", label: "test name", type: "string" },
+            { id: "computerName", label: "computer", type: "string" },
+            { id: "message", label: "message", type: "string" }
         ],
         "rows": [
             {
@@ -200,7 +232,8 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
                         { v: testResult.NotExecuted },
                         { v: testResult.Pending },
                         { v: testResult.Aborted }
-                    ]
+                    ],
+                    filePath: testResult.FilePath
                 };
                 rows.push(row);
             });
