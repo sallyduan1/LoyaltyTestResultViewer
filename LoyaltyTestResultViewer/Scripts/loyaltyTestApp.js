@@ -1,4 +1,4 @@
-﻿angular.module("loyalty-report-app", ["ngRoute", "googlechart"]).config(['$routeProvider',
+﻿angular.module("loyalty-report-app", ["ngRoute", "googlechart", "ngStorage"]).config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
             when('/report/', {

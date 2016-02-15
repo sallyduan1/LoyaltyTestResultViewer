@@ -1,9 +1,12 @@
 /* global angular */
-angular.module("loyalty-report-app").controller("lrChartController", function ($http) {
+angular.module("loyalty-report-app").controller("lrChartController", function ($scope, $http, $localStorage) {
     var vm = this;
     vm.showTable = false;
 
     vm.chartObject = {};
+    vm.lastNDays = 7;
+    vm.$storage = $localStorage.$default({ lastNDays: 7 });
+
     vm.tableTitle = '';
     vm.chartObject.data = {
         cols: [
@@ -142,7 +145,7 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
         }
     };
     vm.selectHandler = function (selectedItem) {
-        if (!selectedItem) return;
+        if (!selectedItem || selectedItem.row === null) return;
 
         //todo: 
         // vm.chartObject.data.rows[selectedItem.row].fileName
@@ -180,6 +183,43 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
         //vm.tableObject.data.rows = detail;
     }
 
+    var activate = function () {
+        var lastNDays = vm.$storage.lastNDays;
+        vm.showTable = false;
+        $http({
+            method: 'GET',
+            url: '/api/report/' + lastNDays
+
+        }).then(function success(response) {
+            console.log(response.data);
+            var rows = [];
+
+            _.forEach(response.data, function (testResult) {
+                var row = {
+                    c: [
+                        { v: testResult.Date + "(" + testResult.Total + ")" },
+                        { v: testResult.Passed },
+                        { v: testResult.Failed },
+                        { v: testResult.Inconclusive },
+                        { v: testResult.NotExecuted },
+                        { v: testResult.Pending },
+                        { v: testResult.Aborted }
+                    ],
+                    filePath: testResult.FilePath
+                };
+                rows.push(row);
+            });
+
+            vm.chartObject.data.rows = rows;
+        }, function error(response) {
+            console.log(response);
+
+        });
+    }
+    $scope.$watch("vm.$storage.lastNDays", function handleDaysChange() {
+        console.log(vm.$storage.lastNDays);
+        activate();
+    });
 
     vm.tableObject = {};
     vm.tableObject.data = {
@@ -213,37 +253,6 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
         height: '100%'
     };
 
-    var activate = function () {
-        $http({
-            method: 'GET',
-            url: '/api/report/6'
-
-        }).then(function success(response) {
-            console.log(response.data);
-            var rows = [];
-
-            _.forEach(response.data, function (testResult) {
-                var row = {
-                    c: [
-                        { v: testResult.Date + "(" + testResult.Total + ")" },
-                        { v: testResult.Passed },
-                        { v: testResult.Failed },
-                        { v: testResult.Inconclusive },
-                        { v: testResult.NotExecuted },
-                        { v: testResult.Pending },
-                        { v: testResult.Aborted }
-                    ],
-                    filePath: testResult.FilePath
-                };
-                rows.push(row);
-            });
-
-            vm.chartObject.data.rows = rows;
-        }, function error(response) {
-            console.log(response);
-
-        });
-    }
 
     activate();
 });

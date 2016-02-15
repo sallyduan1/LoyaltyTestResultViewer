@@ -13,6 +13,16 @@ using WebGrease.Css.Extensions;
 
 namespace LoyaltyTestResultViewer.Controllers
 {
+
+    public static class MiscExtensions
+    {
+        // Ex: collection.TakeLast(5);
+        public static IEnumerable<T> TakeLast<T>(this IEnumerable<T> source, int N)
+        {
+            return source.Skip(Math.Max(0, source.Count() - N));
+        }
+    }
+
     public class ReportController : ApiController
     {
         public XNamespace ns { get; set; }
@@ -60,7 +70,7 @@ namespace LoyaltyTestResultViewer.Controllers
 
             var filesSorted = (from pair in dateBasedFiles
                                orderby pair.Value ascending
-                               select pair).Take(lastDays);
+                               select pair).TakeLast(lastDays);
 
             //var filesSorted = (from file in files orderby file descending select file).Take(lastDays);
             var testRsults = filesSorted.Select(RetriveData).ToList();
