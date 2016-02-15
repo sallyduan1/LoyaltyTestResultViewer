@@ -134,6 +134,9 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
             }
         ]
     };
+    vm.chartObject.view = {
+        columns: [0, 1, 2, 3, 4, 5, 6]
+    };
     vm.chartObject.type = 'ColumnChart';
     vm.chartObject.options = {
         'title': 'ECommerce Loyalty Test Report',
@@ -142,45 +145,65 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
             1: { color: 'red' },
             2: { color: 'brown' },
             3: { color: 'blue' },
+            4: { color: 'magenta' },
+            5: { color: 'purple' }
+        },
+        seriesDefault: {
+            0: { color: 'green' },
+            1: { color: 'red' },
+            2: { color: 'brown' },
+            3: { color: 'blue' },
+            4: { color: 'magenta' },
+            5: { color: 'purple' }
         }
+
     };
     vm.selectHandler = function (selectedItem) {
-        if (!selectedItem || selectedItem.row === null) return;
-
-        //todo: 
-        // vm.chartObject.data.rows[selectedItem.row].fileName
-        //"C:\Users\Mike Zhang\Source\Repos\LoyaltyTestResultViewer\LoyaltyTestResultViewer\TestData\X3G9_MW00977477 2015-12-26 17_16_50.trx"
-        //selectedItem.column
-        var filePath = encodeURI(vm.chartObject.data.rows[selectedItem.row].filePath);
-        $http({
-            method: 'GET',
-            url: '/api/report/' + filePath + '/' + selectedItem.column
-        }).then(function success(response) {
-            vm.showTable = true;
-            console.log(response.data);
-            var rows = [];
-
-            _.forEach(response.data, function (testCase) {
-                var row = {
-                    c: [
-                        { v: testCase.TestName },
-                        { v: testCase.ComputerName },
-                        { v: testCase.Message }
-                    ],
+        if (!selectedItem) return;
+        else if (selectedItem.row == null) {
+            var col = selectedItem.column;
+            if (vm.chartObject.view.columns[col] === col) {
+                vm.chartObject.view.columns[col] = {
+                    label: vm.chartObject.data.cols[col].label,
+                    type: vm.chartObject.data.cols[col].type,
+                    calc: function() {
+                        return null;
+                    }
                 };
-                rows.push(row);
+                vm.chartObject.options.series[col - 1].color = '#CCCCCC';
+            } else {
+                vm.chartObject.view.columns[col] = col;
+                vm.chartObject.options.series[col - 1].color = vm.chartObject.options.seriesDefault[col - 1].color;
+            }
+        } else {
+            var filePath = encodeURI(vm.chartObject.data.rows[selectedItem.row].filePath);
+            $http({
+                method: 'GET',
+                url: '/api/report/' + filePath + '/' + selectedItem.column
+            }).then(function success(response) {
+                vm.showTable = true;
+                console.log(response.data);
+                var rows = [];
+
+                _.forEach(response.data, function (testCase) {
+                    var row = {
+                        c: [
+                            { v: testCase.TestName },
+                            { v: testCase.ComputerName },
+                            { v: testCase.Message }
+                        ],
+                    };
+                    rows.push(row);
+                });
+
+                vm.tableTitle = vm.chartObject.data.rows[selectedItem.row].c[0].v + ' ' + vm.chartObject.data.cols[selectedItem.column].label;
+                vm.tableObject.data.rows = rows;
+            }, function error(response) {
+                console.log(response);
+                vm.showTable = false;
+
             });
-
-            vm.tableTitle = vm.chartObject.data.rows[selectedItem.row].c[0].v + ' ' + vm.chartObject.data.cols[selectedItem.column].label;
-            vm.tableObject.data.rows = rows;
-        }, function error(response) {
-            console.log(response);
-            vm.showTable = false;
-
-        });
-
-        //var detail = vm.chartObject.data.rows[selectedItem.row].c[selectedItem.column].detail;
-        //vm.tableObject.data.rows = detail;
+        }
     }
 
     var activate = function () {
