@@ -2,6 +2,7 @@
 angular.module("loyalty-report-app").controller("lrChartController", function ($scope, $http, $localStorage) {
     var vm = this;
     vm.showTable = false;
+    vm.showChart = true;
 
     vm.chartObject = {};
     vm.lastNDays = 7;
@@ -208,13 +209,14 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
 
     var activate = function () {
         var lastNDays = vm.$storage.lastNDays;
-        vm.showTable = false;
+        vm.showTable = true;
         $http({
             method: 'GET',
             url: '/api/report/' + lastNDays
 
         }).then(function success(response) {
             console.log(response.data);
+            vm.showChart = true;
             var rows = [];
 
             _.forEach(response.data, function (testResult) {
@@ -235,6 +237,8 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
 
             vm.chartObject.data.rows = rows;
         }, function error(response) {
+            vm.showTable = false;
+            vm.showChart = false;
             console.log(response);
 
         });

@@ -193,10 +193,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database3.mdf" />
-    <Content Include="App_Data\Database3_log.ldf">
-      <DependentUpon>Database3.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\dbo.Table_LoyaltyWebTest.sql" />
     <Content Include="App_Data\Report.mdf" />
     <Content Include="App_Data\Report_log.ldf">
@@ -284,6 +280,7 @@
     <Content Include="Sample.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\Local-IIS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
