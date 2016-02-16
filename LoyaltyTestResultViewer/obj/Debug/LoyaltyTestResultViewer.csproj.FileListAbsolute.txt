@@ -51,3 +51,9 @@ c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\Micros
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\obj\Debug\LoyaltyTestResultViewer.dll
 c:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\obj\Debug\LoyaltyTestResultViewer.pdb
 C:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\obj\Debug\LoyaltyTestResultViewer.csprojResolveAssemblyReference.cache
+C:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\System.Net.Http.Formatting.dll
+C:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\System.Web.Http.dll
+C:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\System.Web.Http.WebHost.dll
+C:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\System.Net.Http.Formatting.xml
+C:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\System.Web.Http.xml
+C:\unstructedTimeDemo\LoyaltyTestResultViewer\LoyaltyTestResultViewer\bin\System.Web.Http.WebHost.xml
