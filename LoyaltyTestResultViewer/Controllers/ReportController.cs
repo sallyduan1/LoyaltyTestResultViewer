@@ -135,12 +135,12 @@ namespace LoyaltyTestResultViewer.Controllers
         private TestCase RetriveUnitTestData(XElement element)
         {
             var messageElement = element.Descendants(ns + "Message").FirstOrDefault();
-            var message = messageElement?.Value ?? "";
+            var message = (messageElement ==null)?messageElement.Value: "";
             var testCase = new TestCase()
             {
                 TestName = element.Attribute("testName").Value,
                 ComputerName = element.Attribute("computerName").Value,
-                Message = message,
+                Message = message
             };
 
             return testCase;
