@@ -334,12 +334,9 @@
     <Content Include="Views\VolatilityMeasure\Index.cshtml" />
     <Content Include="Views\VolatilityMeasure\_partialView.cshtml" />
     <Content Include="TestData\X3G9_MW00977477 2016-02-14 17_16_50.trx" />
-    <Content Include="TestData\X3G9_MW00977477 2016-02-09 14_30_52.trx" />
-    <Content Include="TestData\X3G9_MW00977477 2016-02-10 15_20_26.trx" />
     <Content Include="TestData\X3G9_MW00977477 2016-02-11 15_24_18.trx" />
     <Content Include="TestData\X3G9_MW00977477 2016-02-12 22_54_10.trx" />
     <Content Include="TestData\X3G9_MW00977477 2016-02-13 16_17_57.trx" />
-    <Content Include="TestData\X3G9_MW00977477 2016-02-08 14_30_52.trx" />
     <Content Include="TestData\X3G9_MW00977477 2016-02-07 14_30_52.trx" />
     <Content Include="TestData\X3G9_MW00977477 2016-02-06 15_20_26.trx" />
   </ItemGroup>
