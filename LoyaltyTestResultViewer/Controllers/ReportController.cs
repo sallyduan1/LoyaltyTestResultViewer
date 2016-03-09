@@ -136,8 +136,7 @@ namespace LoyaltyTestResultViewer.Controllers
         {
             string message;
             var messageElement = element.Descendants(ns + "Message").FirstOrDefault();
-           // var message = messageElement?.Value ?? "";
-           // var message = (messageElement==null ||messageElement.Value==null)? messageElement.Value:"";
+          
             if (messageElement == null) {  message = string.Empty; }
             else
             {
