@@ -146,7 +146,7 @@ namespace LoyaltyTestResultViewer.Controllers
             {
                 TestName = element.Attribute("testName").Value,
                 ComputerName = element.Attribute("computerName").Value,
-                Message = message,
+                Message = message
             };
 
             return testCase;

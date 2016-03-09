@@ -341,6 +341,7 @@
     <Content Include="TestData\X3G9_MW00977477 2016-02-06 15_20_26.trx" />
     <Content Include="TestData\x3g9_U00979650 2016-03-07 22_22_38.trx" />
     <Content Include="TestData\x3g9_U00979650 2016-03-08 23_02_06.trx" />
+    <Content Include="TestData\x3g9_U00979650 2016-03-09 10_56_39.trx" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
