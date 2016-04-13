@@ -264,12 +264,10 @@
     <Content Include="Content\themes\ui-darkness\jquery.ui.slider.css" />
     <Content Include="Content\themes\ui-darkness\jquery.ui.tabs.css" />
     <Content Include="Content\themes\ui-darkness\jquery.ui.theme.css" />
-    <Content Include="datapickerpage.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="HtmlPage1.html" />
     <Content Include="partials\lrChart.html" />
     <Content Include="partials\lrChartController.js" />
     <Content Include="ProgressList.txt" />

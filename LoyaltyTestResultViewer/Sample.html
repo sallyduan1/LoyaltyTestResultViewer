@@ -8,14 +8,12 @@
 
     <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['orgchart']}]}"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
-    <title> by lelehehe</title>
+    <title> test by Sally Duan</title>
 </head>
 
 <body>
     <div id="chart_div"></div>
-    <!--<div id="chart_div2"></div>-->
-    <div id="chart_div3"></div>
-
+    <div id="chart_div3"></div>  
 
 <script type='text/javascript'>
     var rawData1 = [
@@ -34,8 +32,6 @@
         ['Date3', 'test case 7', 1, "detail 7", 'success'],
         ['Date3', 'test case 8', 1, "detail 8", 'success']
     ];
-
-
     function drawChart() {
         var data = new google.visualization.DataTable();
         var firstSelected = 'Date1';
@@ -49,7 +45,6 @@
         data2.addColumn('number', 'Value');
         data2.addColumn({ type: 'string', role: 'tooltip' });
         data2.addColumn('string', 'ResultType');
-
         data2.addRows(rawData2);
 
         var chart = new google.visualization.ChartWrapper({
@@ -57,54 +52,13 @@
             containerId: 'chart_div',
             dataTable: data,
             options: {
-                // setting the "isStacked" option to true fixes the spacing problem
-                //isStacked: true,
                 tooltip: { isHtml: true },
                 legend: 'none',
                 height: 300,
                 width: 600
-            }
-            //,
-            //view: {
-            //    // set the columns to use in the chart's view
-            //    // calculated columns put data belonging to each date in the proper column
-            //    columns: [0, {
-            //        type: 'number',
-            //        label: 'Date1',
-            //        calc: function (dt, row) {
-            //            return (dt.getValue(row, 0) == 'Date1') ? dt.getValue(row, 1) : null;
-            //        }
-            //    }, {
-            //        type: 'number',
-            //        label: 'Date2',
-            //        calc: function (dt, row) {
-            //            return (dt.getValue(row, 0) == 'Date2') ? dt.getValue(row, 1) : null;
-            //        }
-            //    }, {
-            //        type: 'number',
-            //        label: 'asdfasdf',
-            //        calc: function (dt, row) {
-            //            return (dt.getValue(row, 0) == 'Date3') ? dt.getValue(row, 1) : null;
-            //        }
-            //    }]
-            //}
-        });
-
-        //var chart2 = new google.visualization.ChartWrapper({
-        //    chartType: 'ColumnChart',
-        //    containerId: 'chart_div2',
-        //    dataTable: data2,
-        //    options: {
-        //        height: 300,
-        //        width: 600
-        //    },
-        //    view: {
-        //        columns: [1, 2, 3],
-        //        // set default view to Date1
-        //        rows: data2.getFilteredRows([{ column: 0, value: firstSelected }])
-        //    }
-        //});
-
+            }  
+        });   
+       
         var chart3 = new google.visualization.ChartWrapper({
             chartType: 'PieChart',
             containerId: 'chart_div3',
@@ -118,23 +72,14 @@
                 width: 600
             },
             view: {
-                columns: [1, 2, 3, 4],
-                // set default view to Date1
+                columns: [1, 2, 3, 4], 
                 rows: data2.getFilteredRows([{ column: 0, value: firstSelected }])
-            }
-
-        });
-
+            } 
+        }); 
 
         google.visualization.events.addListener(chart, 'select', function () {
             var sel = chart.getChart().getSelection();
             var date = data.getValue(sel[0].row, 0);
-            //var rows2 = data2.getFilteredRows([{ column: 0, value: date }]);
-            //var view2 = chart2.getView();
-            //view2.rows = rows2;
-            //chart2.setView(view2);
-            //chart2.draw();
-
             var rows3 = data2.getFilteredRows([{ column: 0, value: date }]);
             var view3 = chart3.getView();
             view3.rows = rows3;
@@ -142,22 +87,14 @@
             chart3.setOption('title', 'current time: ' + date);
             chart3.draw();
         });
-
-        chart.draw();
-        //chart2.draw();
+        chart.draw(); 
         chart3.draw();
-    }
-
+    }   
     $(function () {
-        console.log("ready!");
-
-        //google.load('visualization', '1', { 'packages': ['corechart', 'controls']});
-        //google.setOnLoadCallback(drawChart);
+        console.log("ready!"); 
         drawChart();
     });
 
-</script>
-
-</body>
-
+</script>  
+</body>  
 </html>

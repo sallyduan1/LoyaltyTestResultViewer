@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Xml.Linq;
 using LoyaltyTestResultViewer.Models;
@@ -26,21 +24,6 @@ namespace LoyaltyTestResultViewer.Controllers
     public class ReportController : ApiController
     {
         public XNamespace ns { get; set; }
-
-        //TestResult[] results = new TestResult[]
-        //{
-        //    new TestResult { Date = DateTime.Today, TestCases = new TestCase[]
-        //    {
-        //        new TestCase { TestName = "Test1", ComputerName = "pc1", Detail = "detail1", TestStatus = TestStatusType.Error},
-        //        new TestCase { TestName = "Test2", ComputerName = "pc2", Detail = "detail2", TestStatus = TestStatusType.Error},
-        //        new TestCase { TestName = "Test3", ComputerName = "pc3", Detail = "detail3", TestStatus = TestStatusType.Error}
-        //    }},
-        //    new TestResult { Date = DateTime.Today, TestCases = new TestCase[]
-        //    {
-        //        new TestCase { TestName = "Test4", ComputerName = "pc4", Detail = "detail4", TestStatus = TestStatusType.Error},
-        //        new TestCase { TestName = "Test5", ComputerName = "pc5", Detail = "detail5", TestStatus = TestStatusType.Error}
-        //    }},
-        //};
 
         public IEnumerable<TestResult> GetTestResults()
         {

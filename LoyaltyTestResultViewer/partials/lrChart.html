@@ -3,8 +3,9 @@
 
 <div ng-if="vm.showChart" google-chart chart="vm.chartObject" style="height: 600px; width: 100%;" agc-on-select="vm.selectHandler(selectedItem)"></div>
 <div  ng-if="!vm.showTable" class="alert alert-danger" role="alert">
-    Make sure your test data files are stored at the right location. 
+    Make sure your test data files are stored at the right location.
 </div>
+<hr/>
 
 <div ng-if="vm.showTable" class="animate-if">
     <h2 ng-bind="vm.tableTitle"></h2>

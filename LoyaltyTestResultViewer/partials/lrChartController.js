@@ -23,35 +23,34 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
         rows: [
             {
                 c: [
-                   { v: "week1" },
-                   { v: 3 },
-                   { v: 4 },
-                   { v: 5 },
-                   { v: 6 },
+                    { v: "week1" },
+                    { v: 3 },
+                    { v: 4 },
+                    { v: 5 },
+                    { v: 6 },
                 ]
             },
             {
                 c: [
-                   { v: "week2" },
-                   { v: 31 },
-                   { v: 41 },
-                   { v: 15 },
-                   { v: 16 },
+                    { v: "week2" },
+                    { v: 31 },
+                    { v: 41 },
+                    { v: 15 },
+                    { v: 16 },
                 ]
             },
             {
                 c: [
-                   { v: "week3" },
-                   { v: 1 },
-                   { v: 4 },
-                   { v: 5 },
-                   { v: 6 },
-
+                    { v: "week3" },
+                    { v: 1 },
+                    { v: 4 },
+                    { v: 5 },
+                    { v: 6 },
                 ]
             },
             {
                 c: [
-                   { v: "week4" },
+                    { v: "week4" },
                     {
                         v: 20,
                         detail: [
@@ -130,7 +129,6 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
                         ]
 
                     },
-
                 ]
             }
         ]
@@ -141,6 +139,9 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
     vm.chartObject.type = 'ColumnChart';
     vm.chartObject.options = {
         'title': 'ECommerce Loyalty Test Report',
+        backgroundColor: { stroke: "#000", strokeWidth: 4, fill: "#ddd" },
+        titleTextStyle: { fontSize: 19 },
+        tooltip: { showColorCode: true },
         series: {
             0: { color: 'green' },
             1: { color: 'red' },
@@ -148,16 +149,7 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
             3: { color: 'blue' },
             4: { color: 'magenta' },
             5: { color: 'purple' }
-        },
-        seriesDefault: {
-            0: { color: 'green' },
-            1: { color: 'red' },
-            2: { color: 'brown' },
-            3: { color: 'blue' },
-            4: { color: 'magenta' },
-            5: { color: 'purple' }
         }
-
     };
     vm.selectHandler = function (selectedItem) {
         if (!selectedItem) return;
@@ -278,9 +270,8 @@ angular.module("loyalty-report-app").controller("lrChartController", function ($
         showRowNumber: true,
         width: '100%',
         height: '100%'
+       
     };
-
-
     activate();
 });
 
